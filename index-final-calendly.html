@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI With Shandon | AI & Digital Marketing for Local Businesses | Las Vegas</title>
+<meta name="description" content="AI chatbots, automated lead follow-up, Google optimization, and digital marketing for local businesses in Las Vegas. 20 new leads in 30 days or full refund.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+:root {
+  --bg-deep: #06070a;
+  --bg-dark: #0a0c10;
+  --bg-card: #10131a;
+  --bg-card-hover: #161a24;
+  --border: #1a1e2a;
+  --border-light: #252a38;
+  --text-primary: #e8eaf0;
+  --text-secondary: #8b90a0;
+  --text-muted: #5a5f70;
+  --blue: #4B8BF5;
+  --blue-glow: rgba(75, 139, 245, 0.15);
+  --blue-bright: #6da3ff;
+  --teal: #3EDBD3;
+  --teal-glow: rgba(62, 219, 211, 0.12);
+  --rose: #D4A0A0;
+  --rose-glow: rgba(212, 160, 160, 0.1);
+  --red: #f55656;
+  --green: #4ade80;
+  --amber: #fbbf24;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.gradient-text {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 50%, var(--blue-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 16px 0;
+  background: rgba(6, 7, 10, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.nav.scrolled { border-bottom-color: var(--border); background: rgba(6, 7, 10, 0.95); }
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 800;
+}
+.nav-logo span { color: var(--blue); }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 0.875rem; font-weight: 400; color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text-primary); }
+.nav-cta {
+  background: var(--blue);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--blue-bright); transform: translateY(-1px); }
+.nav-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; padding: 8px; }
+.nav-toggle svg { width: 24px; height: 24px; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: fixed; top: 60px; left: 0; right: 0;
+    background: rgba(6, 7, 10, 0.98); backdrop-filter: blur(20px);
+    flex-direction: column; padding: 32px 24px; gap: 24px;
+    transform: translateY(-120%); opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open { transform: translateY(0); opacity: 1; }
+}
+
+/* ============================================
+   HERO + CINEMATIC ANIMATION
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  padding: 120px 24px 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(75, 139, 245, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, rgba(62, 219, 211, 0.04) 0%, transparent 50%);
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+@keyframes heroGlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-2%, -1%) scale(1.05); }
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1200px; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-text { max-width: 560px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border-radius: 100px;
+  background: rgba(75, 139, 245, 0.08);
+  border: 1px solid rgba(75, 139, 245, 0.2);
+  font-size: 0.8rem; font-weight: 500; color: var(--blue);
+  margin-bottom: 28px;
+}
+.hero-badge::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--teal);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800; line-height: 1.1;
+  margin-bottom: 24px;
+}
+.hero p {
+  font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7;
+  margin-bottom: 36px;
+}
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 10px;
+  background: var(--blue); color: #fff;
+  font-weight: 600; font-size: 1rem;
+  transition: all 0.2s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--blue-bright); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(75, 139, 245, 0.3); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 10px;
+  background: transparent; color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  font-weight: 500; font-size: 1rem;
+  transition: all 0.2s; cursor: pointer;
+}
+.btn-secondary:hover { border-color: var(--text-muted); background: rgba(255,255,255,0.03); }
+
+/* ============================================
+   HERO ANIMATION (Right Side)
+   ============================================ */
+.hero-animation {
+  position: relative;
+  width: 100%; max-width: 520px;
+  aspect-ratio: 4/3;
+  perspective: 1000px;
+}
+.anim-scene {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 0.6s ease;
+  display: flex; flex-direction: column;
+}
+.anim-scene.active { opacity: 1; }
+
+/* Scene 1: Boring Website */
+.scene-boring {
+  background: #1a1a2e;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid #2a2a3e;
+}
+.boring-browser-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 14px;
+  background: #12121e;
+  border-bottom: 1px solid #2a2a3e;
+}
+.boring-dot { width: 8px; height: 8px; border-radius: 50%; }
+.boring-dot:nth-child(1) { background: #f55656; }
+.boring-dot:nth-child(2) { background: #fbbf24; }
+.boring-dot:nth-child(3) { background: #4ade80; }
+.boring-url {
+  margin-left: 12px;
+  padding: 4px 12px; border-radius: 4px;
+  background: #0d0d18; font-size: 0.7rem; color: #555;
+  flex: 1;
+}
+.boring-content { padding: 20px; flex: 1; }
+.boring-header { width: 60%; height: 10px; background: #2a2a3e; border-radius: 4px; margin-bottom: 12px; }
+.boring-line { width: 80%; height: 6px; background: #1e1e30; border-radius: 3px; margin-bottom: 8px; }
+.boring-line:nth-child(3) { width: 65%; }
+.boring-line:nth-child(4) { width: 45%; }
+.boring-block { width: 100%; height: 40px; background: #1e1e30; border-radius: 6px; margin-top: 16px; }
+.boring-overlay {
+  position: absolute; inset: 0;
+  background: rgba(245, 86, 86, 0.08);
+  border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.5s ease 1.5s;
+}
+.scene-boring.active .boring-overlay { opacity: 1; }
+.boring-x {
+  font-family: var(--font-display);
+  font-size: 2.5rem; font-weight: 800; color: var(--red);
+  opacity: 0; animation: fadeScale 0.4s ease forwards 2s;
+}
+.boring-stat {
+  font-size: 0.8rem; color: var(--red); font-weight: 500;
+  opacity: 0; animation: fadeUp 0.4s ease forwards;
+  margin-top: 4px;
+}
+.boring-stat:nth-child(2) { animation-delay: 2.2s; }
+.boring-stat:nth-child(3) { animation-delay: 2.5s; }
+.boring-stat:nth-child(4) { animation-delay: 2.8s; }
+
+/* Scene 2: AI Website */
+.scene-ai {
+  background: linear-gradient(135deg, #0d1117 0%, #0f1520 100%);
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(75, 139, 245, 0.2);
+  box-shadow: 0 0 40px rgba(75, 139, 245, 0.08);
+}
+.ai-browser-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 14px;
+  background: #080b10;
+  border-bottom: 1px solid rgba(75, 139, 245, 0.15);
+}
+.ai-url {
+  margin-left: 12px;
+  padding: 4px 12px; border-radius: 4px;
+  background: rgba(75, 139, 245, 0.08); font-size: 0.7rem; color: var(--blue);
+  flex: 1;
+  border: 1px solid rgba(75, 139, 245, 0.15);
+}
+.ai-content { padding: 20px; flex: 1; position: relative; }
+.ai-header {
+  font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.ai-subtext { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 16px; }
+.ai-service-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.ai-tag {
+  padding: 3px 10px; border-radius: 100px;
+  font-size: 0.6rem; font-weight: 500;
+  background: rgba(75, 139, 245, 0.08);
+  border: 1px solid rgba(75, 139, 245, 0.15);
+  color: var(--blue);
+}
+.ai-tag.teal { background: rgba(62, 219, 211, 0.08); border-color: rgba(62, 219, 211, 0.15); color: var(--teal); }
+
+/* Chatbot popup in scene 2 */
+.ai-chatbot {
+  position: absolute; bottom: 16px; right: 16px;
+  width: 200px;
+  background: #0d1117;
+  border: 1px solid rgba(75, 139, 245, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0; transform: translateY(10px) scale(0.95);
+  animation: chatPop 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+.chatbot-header {
+  padding: 8px 10px;
+  background: rgba(75, 139, 245, 0.1);
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.65rem; font-weight: 600; color: var(--blue);
+}
+.chatbot-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.chatbot-msgs { padding: 8px 10px; }
+.chatbot-msg {
+  padding: 5px 8px; border-radius: 6px;
+  font-size: 0.6rem; margin-bottom: 4px;
+  max-width: 85%;
+  opacity: 0; animation: msgIn 0.3s ease forwards;
+}
+.chatbot-msg.bot { background: rgba(75, 139, 245, 0.1); color: var(--blue-bright); }
+.chatbot-msg.user { background: rgba(62, 219, 211, 0.08); color: var(--teal); margin-left: auto; }
+.chatbot-msg:nth-child(1) { animation-delay: 1.2s; }
+.chatbot-msg:nth-child(2) { animation-delay: 2s; }
+.chatbot-msg:nth-child(3) { animation-delay: 2.8s; }
+
+/* Lead notification */
+.lead-notification {
+  position: absolute; top: 16px; right: -10px;
+  background: rgba(62, 219, 211, 0.1);
+  border: 1px solid rgba(62, 219, 211, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  opacity: 0; transform: translateX(20px);
+  animation: slideNotif 0.5s ease forwards;
+  animation-delay: 3.5s;
+  max-width: 210px;
+}
+.notif-header { font-size: 0.65rem; font-weight: 600; color: var(--teal); margin-bottom: 3px; }
+.notif-body { font-size: 0.6rem; color: var(--text-secondary); line-height: 1.4; }
+
+/* Scene 3: Results */
+.scene-results {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(62, 219, 211, 0.05) 0%, var(--bg-deep) 70%);
+  border-radius: 12px; border: 1px solid var(--border);
+}
+.results-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  width: 90%; margin: 0 auto;
+}
+.result-card {
+  text-align: center; padding: 20px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  opacity: 0; transform: translateY(15px);
+  animation: fadeUp 0.5s ease forwards;
+}
+.result-card:nth-child(1) { animation-delay: 0.2s; }
+.result-card:nth-child(2) { animation-delay: 0.5s; }
+.result-card:nth-child(3) { animation-delay: 0.8s; }
+.result-number {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 800;
+}
+.result-number.blue { color: var(--blue); }
+.result-number.teal { color: var(--teal); }
+.result-number.green { color: var(--green); }
+.result-label { font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px; }
+.results-revenue {
+  margin-top: 24px; text-align: center;
+  opacity: 0; animation: fadeUp 0.5s ease forwards 1.2s;
+}
+.revenue-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; }
+.revenue-amount {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 800; color: var(--teal);
+}
+.revenue-sub { font-size: 0.7rem; color: var(--text-secondary); margin-top: 2px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeScale { from { opacity:0; transform:scale(0.5); } to { opacity:1; transform:scale(1); } }
+@keyframes chatPop { from { opacity:0; transform:translateY(10px) scale(0.95); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes msgIn { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+@keyframes slideNotif { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
+
+/* Animation progress dots */
+.anim-progress {
+  display: flex; gap: 8px; justify-content: center;
+  margin-top: 16px;
+}
+.anim-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border-light);
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.anim-dot.active { background: var(--blue); transform: scale(1.3); }
+
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 40px; }
+  .hero-text { max-width: 100%; text-align: center; }
+  .hero-badge { margin: 0 auto 28px; }
+  .hero-buttons { justify-content: center; }
+  .hero-animation { max-width: 400px; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 100px 16px 60px; }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .results-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .result-card { padding: 14px 6px; }
+  .result-number { font-size: 1.2rem; }
+}
+
+/* ============================================
+   GUARANTEE BANNER
+   ============================================ */
+.guarantee {
+  padding: 60px 24px;
+  background: linear-gradient(135deg, rgba(62, 219, 211, 0.04) 0%, rgba(75, 139, 245, 0.04) 100%);
+  border-top: 1px solid rgba(62, 219, 211, 0.1);
+  border-bottom: 1px solid rgba(62, 219, 211, 0.1);
+}
+.guarantee-inner {
+  max-width: 800px; margin: 0 auto; text-align: center;
+}
+.guarantee-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(62, 219, 211, 0.1);
+  border: 1px solid rgba(62, 219, 211, 0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
+}
+.guarantee h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800; margin-bottom: 12px;
+}
+.guarantee h2 span { color: var(--teal); }
+.guarantee p {
+  font-size: 1rem; color: var(--text-secondary); line-height: 1.7;
+  max-width: 600px; margin: 0 auto;
+}
+.guarantee-fine {
+  margin-top: 16px;
+  font-size: 0.8rem; color: var(--text-muted);
+}
+
+/* ============================================
+   PROBLEM SECTION — Scenario-Based
+   ============================================ */
+.problem {
+  padding: 120px 24px;
+}
+.problem-header {
+  text-align: center; max-width: 700px; margin: 0 auto 72px;
+}
+.problem-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 16px;
+}
+.scenario-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  max-width: 1000px; margin: 0 auto;
+}
+.scenario-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+.scenario-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+.scenario-time {
+  font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.scenario-story {
+  font-size: 1rem; color: var(--text-secondary); line-height: 1.8;
+  margin-bottom: 16px;
+}
+.scenario-story em { color: var(--text-primary); font-style: normal; font-weight: 500; }
+.scenario-cost {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 600;
+}
+.cost-red { background: rgba(245, 86, 86, 0.08); color: var(--red); border: 1px solid rgba(245, 86, 86, 0.15); }
+
+@media (max-width: 768px) {
+  .scenario-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   SOLUTION — What I Build
+   ============================================ */
+.solution {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-dark) 100%);
+}
+.solution-header {
+  text-align: center; max-width: 700px; margin: 0 auto 72px;
+}
+.solution-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 16px;
+}
+.solution-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  max-width: 1000px; margin: 0 auto;
+}
+.sol-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  transition: all 0.3s;
+}
+.sol-card:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(75, 139, 245, 0.08); }
+.sol-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+.sol-icon.blue { background: rgba(75, 139, 245, 0.1); }
+.sol-icon.teal { background: rgba(62, 219, 211, 0.1); }
+.sol-icon.rose { background: rgba(212, 160, 160, 0.1); }
+.sol-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 700;
+  margin-bottom: 8px;
+}
+.sol-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.sol-highlight { font-size: 0.75rem; color: var(--teal); font-weight: 500; margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .solution-grid { grid-template-columns: 1fr; max-width: 500px; }
+}
+
+/* ============================================
+   ROI MATH — Visual
+   ============================================ */
+.roi {
+  padding: 120px 24px;
+}
+.roi-header {
+  text-align: center; max-width: 700px; margin: 0 auto 72px;
+}
+.roi-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 16px;
+}
+.roi-visual {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 32px; align-items: center;
+}
+.roi-box {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 36px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.roi-box.before { }
+.roi-box.after { border-color: rgba(62, 219, 211, 0.2); box-shadow: 0 0 40px rgba(62, 219, 211, 0.06); }
+.roi-box-label {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 20px;
+}
+.roi-box.before .roi-box-label { color: var(--red); }
+.roi-box.after .roi-box-label { color: var(--teal); }
+.roi-big-number {
+  font-family: var(--font-display);
+  font-size: 3rem; font-weight: 800; margin-bottom: 4px;
+}
+.roi-box.before .roi-big-number { color: var(--text-muted); }
+.roi-box.after .roi-big-number { color: var(--teal); }
+.roi-desc { font-size: 0.85rem; color: var(--text-secondary); }
+.roi-arrow {
+  font-size: 2rem; color: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+}
+.roi-bottom {
+  max-width: 900px; margin: 48px auto 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.roi-compare {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px; text-align: center;
+}
+.roi-compare-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; }
+.roi-compare-price {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 700; color: var(--text-secondary);
+}
+.roi-compare-note { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+.roi-yours {
+  margin-top: 24px;
+  text-align: center;
+}
+.roi-yours-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 800; color: var(--blue);
+}
+.roi-yours-note { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
+
+@media (max-width: 768px) {
+  .roi-visual { grid-template-columns: 1fr; gap: 16px; }
+  .roi-arrow { transform: rotate(90deg); }
+  .roi-bottom { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   PORTFOLIO
+   ============================================ */
+.portfolio {
+  padding: 120px 24px;
+  background: var(--bg-dark);
+}
+.portfolio-header {
+  text-align: center; max-width: 700px; margin: 0 auto 60px;
+}
+.portfolio-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 16px;
+}
+.portfolio-card {
+  max-width: 1000px; margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+}
+.portfolio-preview {
+  background: linear-gradient(135deg, #f7f3ef 0%, #f0ebe4 100%);
+  padding: 40px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative;
+}
+.poke-mockup {
+  text-align: center; color: #1a1a1a;
+}
+.poke-brand {
+  font-family: var(--font-display);
+  font-size: 1.3rem; font-weight: 800;
+}
+.poke-brand span { color: #e8734a; }
+.poke-tagline { font-size: 0.75rem; color: #888; margin-top: 4px; margin-bottom: 20px; }
+.poke-stats { display: flex; gap: 20px; justify-content: center; }
+.poke-stat { text-align: center; }
+.poke-stat-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: #e8734a; }
+.poke-stat-label { font-size: 0.6rem; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.portfolio-info { padding: 40px; }
+.portfolio-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;
+}
+.portfolio-type { font-size: 0.8rem; color: var(--blue); font-weight: 500; margin-bottom: 16px; }
+.portfolio-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+.portfolio-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.p-tag {
+  padding: 4px 12px; border-radius: 100px;
+  font-size: 0.7rem; font-weight: 500;
+  background: rgba(75, 139, 245, 0.08);
+  border: 1px solid rgba(75, 139, 245, 0.15);
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .portfolio-card { grid-template-columns: 1fr; }
+  .portfolio-preview { padding: 32px; }
+}
+
+/* ============================================
+   PRICING
+   ============================================ */
+.pricing {
+  padding: 120px 24px;
+}
+.pricing-header {
+  text-align: center; max-width: 700px; margin: 0 auto 60px;
+}
+.pricing-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 16px;
+}
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  max-width: 1050px; margin: 0 auto;
+}
+.price-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  position: relative;
+  transition: all 0.3s;
+}
+.price-card:hover { transform: translateY(-4px); }
+.price-card.featured {
+  border-color: rgba(75, 139, 245, 0.3);
+  box-shadow: 0 0 60px rgba(75, 139, 245, 0.08);
+}
+.price-popular {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--blue);
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 100px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.price-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;
+}
+.price-amount {
+  font-family: var(--font-display);
+  font-size: 2.5rem; font-weight: 800; margin-bottom: 4px;
+}
+.price-amount span { font-size: 1rem; font-weight: 400; color: var(--text-muted); }
+.price-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 24px; }
+.price-features { list-style: none; margin-bottom: 28px; }
+.price-features li {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;
+  padding: 6px 0; padding-left: 24px;
+  position: relative;
+}
+.price-features li::before {
+  content: '✓';
+  position: absolute; left: 0; color: var(--teal); font-weight: 600;
+}
+.price-btn {
+  display: block; width: 100%; padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600; font-size: 0.95rem;
+  transition: all 0.2s;
+  border: none; cursor: pointer;
+}
+.price-btn.primary { background: var(--blue); color: #fff; }
+.price-btn.primary:hover { background: var(--blue-bright); }
+.price-btn.outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border-light); }
+.price-btn.outline:hover { border-color: var(--text-muted); background: rgba(255,255,255,0.02); }
+.pricing-footer {
+  text-align: center; margin-top: 40px;
+  font-size: 0.85rem; color: var(--text-muted);
+}
+.pricing-footer span { color: var(--teal); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about {
+  padding: 120px 24px;
+  background: var(--bg-dark);
+}
+.about-inner {
+  max-width: 800px; margin: 0 auto; text-align: center;
+}
+.about h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; margin-bottom: 8px;
+}
+.about-name { font-size: 1rem; color: var(--blue); font-weight: 500; margin-bottom: 8px; }
+.about-loc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 32px; }
+.about-text { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; }
+.about-skills {
+  display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 36px;
+}
+.about-skill {
+  padding: 6px 16px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 500;
+  background: var(--bg-card); border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   CTA / FOOTER
+   ============================================ */
+.cta-section {
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(75, 139, 245, 0.06) 0%, transparent 60%);
+}
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800; margin-bottom: 16px;
+  position: relative;
+}
+.cta-section p {
+  font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 36px;
+  max-width: 600px; margin-left: auto; margin-right: auto;
+  position: relative;
+}
+.cta-section .btn-primary { position: relative; font-size: 1.1rem; padding: 16px 36px; }
+.cta-contact {
+  margin-top: 32px; position: relative;
+  display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+}
+.cta-link {
+  font-size: 0.9rem; color: var(--text-muted);
+  transition: color 0.2s;
+}
+.cta-link:hover { color: var(--text-primary); }
+
+.footer {
+  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text-primary); }
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><span>AI</span> With Shandon</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problem">Why AI</a></li>
+      <li><a href="#solution">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://calendly.com/shandonjohnsoneugenio/30min" target="_blank" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">Accepting new clients in Las Vegas</div>
+      <h1>It's after hours. Someone just Googled your business. <span class="gradient-text">Who's answering?</span></h1>
+      <p>I build AI systems that sit on your website 24/7 — answering questions, capturing leads, and sending follow-ups within 60 seconds. You wake up to booked appointments instead of missed opportunities.</p>
+      <div class="hero-buttons">
+        <a href="#cta" class="btn-primary">See What I'd Build For You →</a>
+        <a href="#work" class="btn-secondary">View My Work</a>
+      </div>
+    </div>
+    <div class="hero-animation" id="heroAnim">
+      <!-- Scene 1: Boring Website -->
+      <div class="anim-scene active" id="scene1">
+        <div class="scene-boring" style="height:100%; display:flex; flex-direction:column;">
+          <div class="boring-browser-bar">
+            <div class="boring-dot"></div>
+            <div class="boring-dot"></div>
+            <div class="boring-dot"></div>
+            <div class="boring-url">yourbusiness.com</div>
+          </div>
+          <div class="boring-content">
+            <div class="boring-header"></div>
+            <div class="boring-line"></div>
+            <div class="boring-line"></div>
+            <div class="boring-line"></div>
+            <div class="boring-line"></div>
+            <div class="boring-block"></div>
+            <div class="boring-block"></div>
+          </div>
+          <div class="boring-overlay">
+            <div class="boring-x">✕</div>
+            <div class="boring-stat">No chatbot</div>
+            <div class="boring-stat">No follow-up</div>
+            <div class="boring-stat">$0 after hours</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 2: AI-Powered Website -->
+      <div class="anim-scene" id="scene2">
+        <div class="scene-ai" style="height:100%; display:flex; flex-direction:column; position:relative;">
+          <div class="ai-browser-bar">
+            <div class="boring-dot"></div>
+            <div class="boring-dot"></div>
+            <div class="boring-dot"></div>
+            <div class="ai-url">yourbusiness.com ⚡</div>
+          </div>
+          <div class="ai-content">
+            <div class="ai-header">Charm Medical Spa</div>
+            <div class="ai-subtext">Botox · Fillers · Weight Loss · Facials</div>
+            <div class="ai-service-tags">
+              <span class="ai-tag">Book Now</span>
+              <span class="ai-tag teal">24/7 Chat</span>
+              <span class="ai-tag">Reviews ★★★★★</span>
+            </div>
+            <div class="ai-chatbot">
+              <div class="chatbot-header"><div class="chatbot-dot"></div> Kai — AI Assistant</div>
+              <div class="chatbot-msgs">
+                <div class="chatbot-msg bot">Hey! 👋 Looking for Botox or fillers?</div>
+                <div class="chatbot-msg user">Yes! What's the price for Botox?</div>
+                <div class="chatbot-msg bot">Starting at $12/unit. Want to book a free consult?</div>
+              </div>
+            </div>
+            <div class="lead-notification">
+              <div class="notif-header">🔔 New Lead Captured</div>
+              <div class="notif-body">Sarah M. — Interested in Botox — Consultation booked for Thursday 2pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 3: Results -->
+      <div class="anim-scene" id="scene3">
+        <div class="scene-results" style="height:100%;">
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-number blue">24/7</div>
+              <div class="result-label">Coverage</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number teal">60s</div>
+              <div class="result-label">Follow-Up</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number green">8–12%</div>
+              <div class="result-label">Conversion</div>
+            </div>
+          </div>
+          <div class="results-revenue">
+            <div class="revenue-label">Additional monthly revenue</div>
+            <div class="revenue-amount">$12,000 — $18,000+</div>
+            <div class="revenue-sub">Based on 500 monthly visitors</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress dots -->
+      <div class="anim-progress">
+        <div class="anim-dot active" data-scene="0"></div>
+        <div class="anim-dot" data-scene="1"></div>
+        <div class="anim-dot" data-scene="2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     GUARANTEE BANNER
+     ============================================ -->
+<section class="guarantee reveal" id="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-icon">🛡️</div>
+    <h2>20 new leads in 30 days — <span>or full refund.</span></h2>
+    <p>You keep the website, the chatbot, everything I build. If the system doesn't deliver 20 new leads within 30 days of launch, you get every dollar back. No questions, no fine print games.</p>
+    <div class="guarantee-fine">Guarantee applies to Growth and Premium packages. Requires minimum 200 monthly website visitors.</div>
+  </div>
+</section>
+
+<!-- ============================================
+     THE PROBLEM — Scenario Stories
+     ============================================ -->
+<section class="problem" id="problem">
+  <div class="problem-header reveal">
+    <div class="section-label">The Problem</div>
+    <h2>This is happening to your business <span class="gradient-text">right now</span></h2>
+    <p style="color: var(--text-secondary); margin-top: 12px;">Every one of these scenarios is costing you money today. Not hypothetically. Right now.</p>
+  </div>
+
+  <div class="scenario-grid">
+    <div class="scenario-card reveal">
+      <div class="scenario-time">Tuesday, 10:47 PM</div>
+      <div class="scenario-story">You're on the couch, Netflix on, two glasses in. Someone just Googled <em>"Botox near me Summerlin."</em> They land on your website. No chat. No booking. Nothing. She hits back, taps the next result, <em>books in 30 seconds.</em> You'll never know she existed.</div>
+      <div class="scenario-cost cost-red">↓ $400–$600 gone</div>
+    </div>
+
+    <div class="scenario-card reveal">
+      <div class="scenario-time">Wednesday, 2:15 PM</div>
+      <div class="scenario-story">A lead filled out your contact form <em>Monday morning.</em> It's been 47 hours. Your front desk finally calls back. <em>"Oh, I already booked somewhere else."</em> Five minutes was the window. You took two days.</div>
+      <div class="scenario-cost cost-red">↓ 80% drop after 5 min</div>
+    </div>
+
+    <div class="scenario-card reveal">
+      <div class="scenario-time">Saturday, All Day</div>
+      <div class="scenario-story">Your receptionist answered the same 6 questions 14 times today. <em>"What are your hours?"</em> <em>"Do you take walk-ins?"</em> <em>"How much is a facial?"</em> Meanwhile, three people who wanted to book couldn't get through because the line was busy.</div>
+      <div class="scenario-cost cost-red">↓ Hours burned daily</div>
+    </div>
+
+    <div class="scenario-card reveal">
+      <div class="scenario-time">Every Single Day</div>
+      <div class="scenario-story">Your website gets hundreds of visitors a month. <em>2–3% convert.</em> The other 97% look at your digital brochure, get nothing useful, and bounce. No engagement. No capture. No reason to stay. Your website is a <em>waiting room with no receptionist.</em></div>
+      <div class="scenario-cost cost-red">↓ 67% of leads lost</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     THE SOLUTION — What I Build
+     ============================================ -->
+<section class="solution" id="solution">
+  <div class="solution-header reveal">
+    <div class="section-label">The Solution</div>
+    <h2>AI that works while you <span class="gradient-text">don't</span></h2>
+    <p style="color: var(--text-secondary); margin-top: 12px;">Every system I build does one thing: turns your website into your best employee. The one that never calls in sick, never takes lunch, and never lets a lead walk.</p>
+  </div>
+
+  <div class="solution-grid">
+    <div class="sol-card reveal">
+      <div class="sol-icon blue">🤖</div>
+      <h3>AI Chat Assistant</h3>
+      <p>A custom chatbot that engages visitors instantly, answers questions about your services, and guides them to book — at 11 PM on a Tuesday or 6 AM on a Sunday.</p>
+      <div class="sol-highlight">Captures leads while you sleep</div>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon teal">⚡</div>
+      <h3>60-Second Follow-Up</h3>
+      <p>When a lead comes in, they get a personalized text and email within 60 seconds. Not 47 hours. Not tomorrow morning. Sixty. Seconds.</p>
+      <div class="sol-highlight">No lead ever falls through</div>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon rose">⭐</div>
+      <h3>Review Management</h3>
+      <p>AI-assisted responses to every Google review within hours. Positive reviews get thanked, concerns get addressed professionally. Your reputation builds on autopilot.</p>
+      <div class="sol-highlight">Trust grows automatically</div>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon blue">📍</div>
+      <h3>Google Business Optimization</h3>
+      <p>Full profile setup, keyword optimization, weekly posts, and review responses. Rank higher in the local map pack where 90% of customers decide.</p>
+      <div class="sol-highlight">More calls within 2 weeks</div>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon teal">📅</div>
+      <h3>Content Engine</h3>
+      <p>30 days of social media content, email campaigns, and Google Business posts. Created, scheduled, and running. Your brand stays visible without you touching anything.</p>
+      <div class="sol-highlight">Consistent presence, zero effort</div>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon rose">📈</div>
+      <h3>CRM & Automation</h3>
+      <p>Customer relationship management setup with automated nurture campaigns. Every lead gets the right message at the right time to move them toward booking.</p>
+      <div class="sol-highlight">Pipeline that fills itself</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ROI MATH
+     ============================================ -->
+<section class="roi" id="roi">
+  <div class="roi-header reveal">
+    <div class="section-label">The Math</div>
+    <h2>One client pays for <span class="gradient-text">everything</span></h2>
+    <p style="color: var(--text-secondary); margin-top: 12px;">Real numbers from a med spa with 500 monthly website visitors.</p>
+  </div>
+
+  <div class="roi-visual reveal">
+    <div class="roi-box before">
+      <div class="roi-box-label">Without AI</div>
+      <div class="roi-big-number">10–15</div>
+      <div class="roi-desc">leads per month</div>
+      <div style="margin-top:12px; font-size:0.75rem; color:var(--text-muted);">2–3% conversion rate</div>
+    </div>
+    <div class="roi-arrow">→</div>
+    <div class="roi-box after">
+      <div class="roi-box-label">With AI</div>
+      <div class="roi-big-number">40–60</div>
+      <div class="roi-desc">leads per month</div>
+      <div style="margin-top:12px; font-size:0.75rem; color:var(--teal);">8–12% conversion rate</div>
+    </div>
+  </div>
+
+  <div class="roi-bottom reveal">
+    <div class="roi-compare">
+      <div class="roi-compare-label">Google Ads</div>
+      <div class="roi-compare-price">$3,000–$5,000</div>
+      <div class="roi-compare-note">per month, recurring</div>
+    </div>
+    <div class="roi-compare">
+      <div class="roi-compare-label">Marketing Agency</div>
+      <div class="roi-compare-price">$2,000–$5,000</div>
+      <div class="roi-compare-note">per month, recurring</div>
+    </div>
+    <div class="roi-compare">
+      <div class="roi-compare-label">Full-Time Receptionist</div>
+      <div class="roi-compare-price">$3,200+</div>
+      <div class="roi-compare-note">per month + benefits</div>
+    </div>
+  </div>
+
+  <div class="roi-yours reveal">
+    <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 8px;">Your investment with AI With Shandon:</div>
+    <div class="roi-yours-price">$2,500–$8,000 one-time</div>
+    <div class="roi-yours-note">One new client at $400–$600 pays for the whole thing. Everything after that is profit.</div>
+  </div>
+</section>
+
+<!-- ============================================
+     PORTFOLIO
+     ============================================ -->
+<section class="portfolio" id="work">
+  <div class="portfolio-header reveal">
+    <div class="section-label">My Work</div>
+    <h2>Real builds. <span class="gradient-text">Real businesses.</span></h2>
+  </div>
+
+  <div class="portfolio-card reveal">
+    <div class="portfolio-preview">
+      <div class="poke-mockup">
+        <div class="poke-brand">Poke <span>Express</span></div>
+        <div class="poke-tagline">Authentic Hawaiian Style Poke · Las Vegas</div>
+        <div class="poke-stats">
+          <div class="poke-stat"><div class="poke-stat-num">15+</div><div class="poke-stat-label">Years</div></div>
+          <div class="poke-stat"><div class="poke-stat-num">3</div><div class="poke-stat-label">Locations</div></div>
+          <div class="poke-stat"><div class="poke-stat-num">4.8★</div><div class="poke-stat-label">Google</div></div>
+          <div class="poke-stat"><div class="poke-stat-num">2,000+</div><div class="poke-stat-label">Reviews</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h3>Poke Express</h3>
+      <div class="portfolio-type">Full Website + Ordering System</div>
+      <div class="portfolio-desc">Complete website build for a 3-location Hawaiian poke shop in Las Vegas. Full menu with pricing, online ordering form, catering section, location pages, and all branding — built to replace third-party delivery app dependence and drive direct orders.</div>
+      <div class="portfolio-tags">
+        <span class="p-tag">Custom Website</span>
+        <span class="p-tag">Online Ordering</span>
+        <span class="p-tag">3 Locations</span>
+        <span class="p-tag">Full Menu</span>
+        <span class="p-tag">Catering</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRICING
+     ============================================ -->
+<section class="pricing" id="pricing">
+  <div class="pricing-header reveal">
+    <div class="section-label">Packages</div>
+    <h2>Invest once. <span class="gradient-text">Profit every month.</span></h2>
+    <p style="color: var(--text-secondary); margin-top: 12px;">No monthly retainers locked in. No agency overhead. One investment that starts working for you immediately.</p>
+  </div>
+
+  <div class="pricing-grid">
+    <!-- Starter -->
+    <div class="price-card reveal">
+      <div class="price-name">Starter</div>
+      <div class="price-amount">$2,500</div>
+      <div class="price-note">One-time investment</div>
+      <ul class="price-features">
+        <li>Custom website build</li>
+        <li>AI chatbot installed</li>
+        <li>Google Business Profile optimization</li>
+        <li>Review response templates</li>
+        <li>1 week delivery</li>
+      </ul>
+      <a href="https://calendly.com/shandonjohnsoneugenio/30min" target="_blank" class="price-btn outline">Get Started</a>
+    </div>
+
+    <!-- Growth -->
+    <div class="price-card featured reveal">
+      <div class="price-popular">Most Popular</div>
+      <div class="price-name">Growth</div>
+      <div class="price-amount">$5,000</div>
+      <div class="price-note">One-time investment</div>
+      <ul class="price-features">
+        <li>Everything in Starter</li>
+        <li>Automated lead follow-up system</li>
+        <li>Email nurture sequences</li>
+        <li>AI review management</li>
+        <li>CRM setup & integration</li>
+        <li>30 days social media content</li>
+        <li>30-day lead generation guarantee</li>
+      </ul>
+      <a href="https://calendly.com/shandonjohnsoneugenio/30min" target="_blank" class="price-btn primary">Get Started</a>
+    </div>
+
+    <!-- Premium -->
+    <div class="price-card reveal">
+      <div class="price-name">Premium</div>
+      <div class="price-amount">$8,000</div>
+      <div class="price-note">One-time investment</div>
+      <ul class="price-features">
+        <li>Everything in Growth</li>
+        <li>Full AI marketing overhaul</li>
+        <li>Ad copy & campaign strategy</li>
+        <li>90 days content & support</li>
+        <li>Monthly analytics reporting</li>
+        <li>Priority response & support</li>
+        <li>Custom integrations</li>
+      </ul>
+      <a href="https://calendly.com/shandonjohnsoneugenio/30min" target="_blank" class="price-btn outline">Get Started</a>
+    </div>
+  </div>
+
+  <div class="pricing-footer reveal">
+    Payment plans available. All packages include a satisfaction guarantee.<br>
+    <span>GBP optimization add-on:</span> $500–$800 setup + $200–$300/month maintenance.
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="about" id="about">
+  <div class="about-inner reveal">
+    <div class="section-label">About</div>
+    <h2>The person behind the systems</h2>
+    <div class="about-name">Shandon Johnson-Eugenio</div>
+    <div class="about-loc">Las Vegas, NV · From Hawai'i 🤙</div>
+    <div class="about-text">I'm from Hawai'i, based in Las Vegas, and I build AI-powered systems that help local businesses capture more leads, convert more customers, and grow their revenue — without hiring a full marketing team or signing an agency retainer.</div>
+    <div class="about-text">I'm self-taught. Everything I know about AI, web development, automation, and digital marketing I learned by building real things for real businesses. No degree. No bootcamp. Just relentless execution and a phone full of demos ready to show you.</div>
+    <div class="about-text">Every solution I build is custom-made for your business, your customers, and your goals. I handle the tech so you can focus on what you do best.</div>
+    <div class="about-skills">
+      <span class="about-skill">AI Chatbots</span>
+      <span class="about-skill">Lead Automation</span>
+      <span class="about-skill">Google Optimization</span>
+      <span class="about-skill">Web Development</span>
+      <span class="about-skill">Content Strategy</span>
+      <span class="about-skill">Digital Marketing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA SECTION
+     ============================================ -->
+<section class="cta-section" id="cta">
+  <h2>Ready to stop losing leads<br><span class="gradient-text">after hours?</span></h2>
+  <p>Free consultation. Custom demo built for your business. No obligation. If it doesn't make sense for you, I'll tell you — and I'll tell you what to do instead.</p>
+  <a href="https://calendly.com/shandonjohnsoneugenio/30min" target="_blank" class="btn-primary">Book a Free Consultation →</a>
+  <div class="cta-contact">
+    <a href="mailto:shandonjohnsoneugenio@gmail.com" class="cta-link">shandonjohnsoneugenio@gmail.com</a>
+    <a href="tel:8083446412" class="cta-link">(808) 344-6412</a>
+    <a href="https://instagram.com/aiwithshandon" class="cta-link" target="_blank">@aiwithshandon</a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 AI With Shandon. All rights reserved. Las Vegas, NV</div>
+    <div class="footer-links">
+      <a href="https://instagram.com/aiwithshandon" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@aiwithshandon" target="_blank">TikTok</a>
+      <a href="https://youtube.com/@aiwithshandon" target="_blank">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script>
+(function() {
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile nav toggle
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const t = document.querySelector(this.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Hero animation cycling
+const scenes = [document.getElementById('scene1'), document.getElementById('scene2'), document.getElementById('scene3')];
+const dots = document.querySelectorAll('.anim-dot');
+let currentScene = 0;
+const sceneDurations = [4000, 5000, 4500]; // ms per scene
+
+function showScene(index) {
+  scenes.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+    // Reset child animations by re-cloning
+    if (i === index) {
+      const clone = s.innerHTML;
+      s.innerHTML = clone;
+    }
+  });
+  dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  currentScene = index;
+}
+
+function cycleScenes() {
+  const next = (currentScene + 1) % scenes.length;
+  showScene(next);
+  setTimeout(cycleScenes, sceneDurations[next]);
+}
+setTimeout(cycleScenes, sceneDurations[0]);
+
+// Allow clicking dots
+dots.forEach(d => d.addEventListener('click', () => showScene(parseInt(d.dataset.index))));
+})();
+</script>
+
+</body>
+</html>
