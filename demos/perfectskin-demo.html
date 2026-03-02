@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Skin Las Vegas | Medical Aesthetics by Brenda Catalan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--rose:#C08B8B;--rose-dark:#A67373;--rose-light:#D4A5A5;--blush:#FDF5F3;--mauve:#8B6F6F;--cream:#FBF8F6;--dark:#2C2222;--text:#3D3333;--muted:#7A6B6B;--white:#FFF}
+body{font-family:'Nunito Sans',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(44,34,34,.95);backdrop-filter:blur(10px);padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--white);letter-spacing:1px}.logo span{color:var(--rose-light)}
+.nav-links{display:flex;gap:28px;list-style:none}.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:.3s}.nav-links a:hover{color:var(--rose-light)}
+.nav-cta{background:var(--rose);color:#fff;padding:10px 24px;border:none;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;transition:.3s;letter-spacing:.5px}
+.nav-cta:hover{background:var(--rose-dark)}
+
+.hero{min-height:100vh;background:linear-gradient(135deg,#2C2222 0%,#3D2E2E 50%,#2C2222 100%);display:flex;align-items:center;justify-content:center;padding:120px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:600px;height:600px;background:radial-gradient(circle,rgba(192,139,139,.1),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(192,139,139,.06),transparent 70%);border-radius:50%}
+.hero-inner{max-width:680px;position:relative;z-index:2}
+.hero-badge{display:inline-block;border:1px solid var(--rose);color:var(--rose-light);padding:8px 22px;border-radius:30px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;font-weight:500}
+.hero h1{color:var(--white);font-size:54px;font-weight:500;line-height:1.15;margin-bottom:22px}
+.hero h1 em{color:var(--rose-light);font-style:italic}
+.hero>div>p{color:rgba(255,255,255,.6);font-size:17px;line-height:1.8;margin-bottom:36px;font-weight:300}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-r{background:var(--rose);color:#fff;padding:15px 34px;border:none;border-radius:4px;font-size:15px;font-weight:600;text-decoration:none;display:inline-block;transition:.3s}
+.btn-r:hover{background:var(--rose-dark);transform:translateY(-2px)}
+.btn-o{border:1px solid rgba(255,255,255,.3);color:#fff;padding:15px 34px;border-radius:4px;font-size:15px;text-decoration:none;display:inline-block;transition:.3s}
+.btn-o:hover{border-color:var(--rose-light);color:var(--rose-light)}
+.hero-stats{display:flex;justify-content:center;gap:50px;margin-top:50px}
+.st{text-align:center}.st b{display:block;color:var(--rose-light);font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600}.st span{color:rgba(255,255,255,.4);font-size:12px;display:block;margin-top:4px}
+
+section{padding:90px 40px}
+.sh{text-align:center;max-width:560px;margin:0 auto 54px}
+.sh h2{font-size:40px;font-weight:500;margin-bottom:14px}
+.sh p{color:var(--muted);font-size:15px;line-height:1.7}
+.rose-line{width:50px;height:2px;background:var(--rose);margin:0 auto 18px}
+
+.about-section{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1000px;margin:0 auto;align-items:center}
+.about-text h3{font-size:30px;font-weight:500;margin-bottom:16px}
+.about-text p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:16px}
+.about-text .sig{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--rose);margin-top:20px}
+.about-quote{background:var(--blush);padding:40px;border-radius:12px;border-left:3px solid var(--rose)}
+.about-quote p{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;line-height:1.6;color:var(--dark)}
+
+.svc-bg{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.svc-card{background:var(--cream);padding:36px 28px;border-radius:8px;text-align:center;transition:.3s;border:1px solid transparent}
+.svc-card:hover{transform:translateY(-4px);border-color:var(--rose-light);box-shadow:0 16px 36px rgba(0,0,0,.06)}
+.svc-icon{font-size:32px;margin-bottom:16px}
+.svc-card h3{font-size:20px;font-weight:500;margin-bottom:10px}
+.svc-card p{color:var(--muted);font-size:14px;line-height:1.7}
+.svc-card .price{color:var(--rose);font-weight:700;font-size:15px;margin-top:12px}
+
+.specials{background:var(--blush)}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.spec-card{background:var(--white);border-radius:8px;overflow:hidden;transition:.3s}
+.spec-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.spec-top{background:var(--rose);padding:18px;color:#fff;text-align:center}
+.spec-top h3{font-size:18px;font-weight:600;font-family:'Cormorant Garamond',serif}
+.spec-body{padding:22px}
+.spec-body p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:10px}
+.spec-body .price{color:var(--rose-dark);font-weight:700;font-size:18px}
+
+.reviews{background:var(--white)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.rev-card{background:var(--cream);padding:28px;border-radius:8px}
+.rev-card .stars{color:var(--rose);margin-bottom:12px}
+.rev-card p{font-size:14px;line-height:1.7;color:var(--muted);font-style:italic;margin-bottom:14px}
+.rev-card strong{font-size:13px;color:var(--dark)}
+
+.contact-section{background:var(--cream)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:960px;margin:0 auto;align-items:center}
+.ct-info h3{font-size:28px;font-weight:500;margin-bottom:16px}
+.ct-info>p{color:var(--muted);line-height:1.8;margin-bottom:20px}
+.ct-d{display:flex;gap:10px;margin-bottom:12px;font-size:15px;align-items:center}
+.ct-form{background:var(--white);padding:36px;border-radius:8px;box-shadow:0 8px 26px rgba(0,0,0,.05)}
+.ct-form input,.ct-form select,.ct-form textarea{width:100%;padding:13px 15px;border:1px solid #E8E0DE;border-radius:4px;font-family:'Nunito Sans',sans-serif;font-size:14px;margin-bottom:14px;transition:.3s}
+.ct-form input:focus,.ct-form select:focus,.ct-form textarea:focus{outline:none;border-color:var(--rose)}
+.ct-form textarea{height:90px;resize:vertical}
+.ct-form button{width:100%;background:var(--rose);color:#fff;padding:15px;border:none;border-radius:4px;font-size:15px;font-weight:600;cursor:pointer;transition:.3s}
+.ct-form button:hover{background:var(--rose-dark)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.45);padding:44px 40px 28px;text-align:center}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:10px;letter-spacing:1px}.f-logo span{color:var(--rose-light)}
+.f-links{display:flex;justify-content:center;gap:24px;margin:14px 0}.f-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:12px}.f-links a:hover{color:var(--rose-light)}
+
+@media(max-width:768px){
+.hero h1{font-size:34px}.hero-stats{flex-direction:column;gap:16px}.hero-btns{flex-direction:column;align-items:center}
+.about-grid,.ct-grid{grid-template-columns:1fr}
+.nav-links{display:none}nav{padding:12px 18px}section{padding:56px 18px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo"><span>Perfect</span> Skin</div>
+<ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#specials">Specials</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul>
+<a href="#contact" class="nav-cta">Book Now</a>
+</nav>
+
+<section class="hero"><div class="hero-inner">
+<div class="hero-badge">Medical Aesthetics Since 2003</div>
+<h1>Discover Your <em>Perfect Skin</em></h1>
+<p>Our strategy for fighting aging is a preventive one. Personalized laser treatments and medical-grade skincare that reveal your natural radiance. Las Vegas' trusted aesthetics destination.</p>
+<div class="hero-btns"><a href="#contact" class="btn-r">Book Your Consultation</a><a href="#specials" class="btn-o">View Specials</a></div>
+<div class="hero-stats">
+<div class="st"><b>5.0&#9733;</b><span>Google Rating</span></div>
+<div class="st"><b>100+</b><span>5-Star Reviews</span></div>
+<div class="st"><b>20+</b><span>Years Experience</span></div>
+</div>
+</div></section>
+
+<section class="about-section" id="about">
+<div class="about-grid">
+<div class="about-text">
+<div class="rose-line" style="margin:0 0 18px"></div>
+<h3>Meet Brenda Catalan</h3>
+<p>Brenda has been in the skincare field since 2003, working with the most prestigious skincare lines and mastering the latest in laser technology. Her advanced knowledge helps clients achieve radiant, younger-looking skin at any age.</p>
+<p>At Perfect Skin Las Vegas, we see the aging process as one that affects the body as a whole. With early prevention, our clients enjoy longer-lasting youthful and natural aesthetics.</p>
+<div class="sig">Master in: Cutera Lasers, Limelight, Laser Genesis, Pearl Fractional, Hair Removal &amp; Titan Excel</div>
+</div>
+<div class="about-quote">
+<p>"A skin without a laser treatment and skincare is like a body without a soul."</p>
+<div style="margin-top:16px;color:var(--rose);font-weight:600;font-size:14px">Brenda Catalan, Founder</div>
+</div>
+</div>
+</section>
+
+<section class="svc-bg" id="services">
+<div class="sh"><div class="rose-line"></div><h2>Our Services</h2><p>Advanced clinical techniques and leading-edge technology for beautiful, lasting results</p></div>
+<div class="svc-grid">
+<div class="svc-card"><div class="svc-icon">&#10024;</div><h3>IPL Photo Facials</h3><p>Erase sun damage, redness, and brown spots with Intense Pulsed Light. No recovery time, visible results in 7-10 days.</p><div class="price">Starting at $295</div></div>
+<div class="svc-card"><div class="svc-icon">&#128142;</div><h3>Chemical Peels</h3><p>SkinCeuticals peels, VI Peel, and The Perfect Derma Peel. Transform your skin texture and tone in just one week.</p><div class="price">Starting at $125</div></div>
+<div class="svc-card"><div class="svc-icon">&#127807;</div><h3>Signature Facial</h3><p>Customized 60-minute facial with medical-grade products, enzyme exfoliation, extractions, and LED light therapy.</p><div class="price">$125</div></div>
+<div class="svc-card"><div class="svc-icon">&#9889;</div><h3>Laser Genesis</h3><p>Cutera YAG laser for wrinkle reduction, acne scars, and large pores. Stimulates new collagen production.</p><div class="price">Starting at $150</div></div>
+<div class="svc-card"><div class="svc-icon">&#128171;</div><h3>Microneedling</h3><p>Non-surgical treatment to improve skin tone, texture, and fine lines. Stimulates natural collagen renewal.</p><div class="price">3 Sessions $750</div></div>
+<div class="svc-card"><div class="svc-icon">&#129524;</div><h3>Dermaplaning</h3><p>Gentle exfoliation removes dead skin and peach fuzz for an instantly smoother, radiant complexion.</p><div class="price">$75</div></div>
+</div>
+</section>
+
+<section class="specials" id="specials">
+<div class="sh"><div class="rose-line"></div><h2>Current Specials</h2><p>Limited-time offers on our most popular treatments</p></div>
+<div class="spec-grid">
+<div class="spec-card"><div class="spec-top"><h3>4 Photo Facials + FREE Hydro-Glow</h3></div><div class="spec-body"><p>Our best value package. Erase sun damage with 4 IPL sessions plus a complimentary Hydro-Glow Facial.</p><div class="price">$795</div></div></div>
+<div class="spec-card"><div class="spec-top"><h3>Botox Facial</h3></div><div class="spec-body"><p>Rejuvenate with 1 Photo Facial + 1 Chemical Peel. Visible results in 7 days. Improves sun damage and uneven skin tone.</p><div class="price">$595</div></div></div>
+<div class="spec-card"><div class="spec-top"><h3>The Perfect Derma Peel</h3></div><div class="spec-body"><p>Transform your skin in just one week. Improves sun damage, minimizes melasma, reduces fine lines and pore size.</p><div class="price">$295</div></div></div>
+<div class="spec-card"><div class="spec-top"><h3>3 Microneedling Sessions</h3></div><div class="spec-body"><p>Non-surgical skin treatment that improves skin tone, texture, and stimulates natural collagen production.</p><div class="price">$750</div></div></div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="sh"><div class="rose-line"></div><h2>What Our Clients Say</h2><p>Real results from real patients who trust Perfect Skin</p></div>
+<div class="rev-grid">
+<div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Brenda is amazing! She really knows what she is doing and my skin has never looked better. I have been coming here for years."</p><strong>Verified Patient</strong></div>
+<div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The best facial I have ever had. Brenda takes the time to explain everything and customize the treatment to your skin."</p><strong>Verified Patient</strong></div>
+<div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Perfect Skin is my go-to for laser treatments. Professional, clean, and the results speak for themselves. Highly recommend!"</p><strong>Verified Patient</strong></div>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="sh"><div class="rose-line"></div><h2>Book Your Visit</h2><p>Start your journey to radiant, younger-looking skin</p></div>
+<div class="ct-grid">
+<div class="ct-info">
+<h3>Visit Perfect Skin</h3>
+<p>Schedule your personalized consultation and discover the treatments that are right for your skin.</p>
+<div class="ct-d">&#128205; 10300 W Charleston Blvd, Ste 17-R16, Las Vegas, NV 89135</div>
+<div class="ct-d">&#128222; (702) 542-3128</div>
+<div class="ct-d">&#128336; Mon-Fri 9:30AM - 5:30PM | Sat 9AM - 1PM</div>
+<div class="ct-d">&#127760; perfectskinlasvegas.com</div>
+<div style="margin-top:24px;background:var(--blush);padding:18px;border-radius:8px;border-left:3px solid var(--rose)">
+<p style="font-size:14px;color:var(--rose-dark);font-weight:600;margin-bottom:4px">Referral Program</p>
+<p style="font-size:13px;color:var(--muted)">Refer a friend and receive 10% of their initial purchase toward your next visit!</p>
+</div>
+</div>
+<div class="ct-form"><input placeholder="Full Name"><input placeholder="Phone Number"><input placeholder="Email Address">
+<select><option>Service Interested In</option><option>IPL Photo Facial</option><option>Chemical Peel</option><option>Signature Facial</option><option>Laser Genesis</option><option>Microneedling</option><option>Dermaplaning</option><option>The Perfect Derma Peel</option><option>Acne Treatment</option><option>Other</option></select>
+<textarea placeholder="Tell us about your skin goals"></textarea>
+<button>Book My Consultation</button></div>
+</div>
+</section>
+
+<footer>
+<div class="f-logo"><span>Perfect</span> Skin Las Vegas</div>
+<p>10300 W Charleston Blvd, Ste 17-R16 | Las Vegas, NV 89135</p>
+<div class="f-links"><a href="#about">About</a><a href="#services">Services</a><a href="#specials">Specials</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+<p style="margin-top:16px;font-size:11px">&#169; 2026 Perfect Skin Las Vegas. All rights reserved.</p>
+</footer>
+
+<script src="//code.tidio.co/bkxtikascgvotnu1f1gwy4gwel2ypokn.js" async></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Look Med Spa | Boutique Medical Spa Las Vegas</title>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--sage:#7D8B75;--sage-dark:#6A7863;--sage-light:#96A68D;--black:#111111;--near-black:#1A1A1A;--off:#F6F5F2;--warm:#FDFCFA;--taupe:#A69B8D;--text:#1E1E1E;--muted:#6D6D6D;--white:#FFF}
+body{font-family:'Sora',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3{font-family:'Italiana',serif}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(17,17,17,.97);backdrop-filter:blur(12px);padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Italiana',serif;font-size:26px;color:var(--white);letter-spacing:2px}
+.logo span{font-weight:400;color:var(--sage-light)}
+.nav-links{display:flex;gap:30px;list-style:none}.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:12px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;transition:.3s}.nav-links a:hover{color:var(--sage-light)}
+.nav-cta{background:var(--sage);color:#fff;padding:10px 24px;border:none;border-radius:0;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:.3s}
+.nav-cta:hover{background:var(--sage-dark)}
+
+.hero{min-height:100vh;background:var(--black);display:flex;align-items:center;justify-content:center;padding:120px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(125,139,117,.06),transparent 55%);border-radius:50%}
+.hero-inner{max-width:720px;position:relative;z-index:2}
+.diamond-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(125,139,117,.1);border:1px solid rgba(125,139,117,.25);color:var(--sage-light);padding:10px 24px;border-radius:0;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px}
+.hero h1{color:var(--white);font-size:56px;font-weight:400;line-height:1.15;margin-bottom:24px;letter-spacing:2px}
+.hero h1 em{color:var(--sage-light);font-style:normal}
+.hero p{color:rgba(255,255,255,.5);font-size:16px;line-height:1.8;margin-bottom:40px;font-weight:300;letter-spacing:.3px;max-width:560px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-s{background:var(--sage);color:#fff;padding:16px 40px;border:none;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:.3s}
+.btn-s:hover{background:var(--sage-dark);transform:translateY(-2px)}
+.btn-t{border:1px solid rgba(255,255,255,.2);color:var(--white);padding:16px 40px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:.3s}
+.btn-t:hover{border-color:var(--sage);color:var(--sage-light)}
+.hero-stats{display:flex;justify-content:center;gap:60px;margin-top:56px}
+.st{text-align:center}.st b{display:block;color:var(--sage-light);font-family:'Italiana',serif;font-size:38px;letter-spacing:1px}.st span{color:rgba(255,255,255,.3);font-size:11px;letter-spacing:2px;text-transform:uppercase;display:block;margin-top:6px}
+
+.diamond-bar{background:var(--white);padding:32px 40px;text-align:center;border-bottom:1px solid rgba(0,0,0,.04)}
+.diamond-bar p{color:var(--sage-dark);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.diamond-sub{color:var(--muted);font-size:12px;font-weight:300;margin-top:6px;letter-spacing:.3px}
+
+section{padding:100px 40px}
+.sh{text-align:center;max-width:560px;margin:0 auto 60px}
+.sh h2{font-size:40px;font-weight:400;margin-bottom:14px;letter-spacing:1px}
+.sh p{color:var(--muted);font-size:14px;line-height:1.7;font-weight:300;letter-spacing:.3px}
+.s-line{width:40px;height:1px;background:var(--sage);margin:0 auto 20px}
+
+.about-section{background:var(--off)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1000px;margin:0 auto;align-items:center}
+.about-text h3{font-size:32px;font-weight:400;margin-bottom:18px;letter-spacing:1px}
+.about-text p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:14px;font-weight:300}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.ah{background:var(--white);padding:18px;border-left:2px solid var(--sage)}
+.ah h4{font-size:13px;font-weight:600;margin-bottom:4px;letter-spacing:.3px}
+.ah p{color:var(--muted);font-size:12px;line-height:1.6;font-weight:300}
+.about-stats{display:grid;gap:20px}
+.as{background:var(--white);padding:28px;text-align:center;border:1px solid rgba(0,0,0,.04)}
+.as b{display:block;font-family:'Italiana',serif;font-size:36px;color:var(--sage);letter-spacing:1px}
+.as span{color:var(--muted);font-size:12px;letter-spacing:.5px;display:block;margin-top:4px}
+
+.svc-bg{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.svc-card{padding:36px 28px;border:1px solid rgba(0,0,0,.05);transition:.3s;position:relative}
+.svc-card::after{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--sage);transform:scaleY(0);transition:.3s;transform-origin:top}
+.svc-card:hover::after{transform:scaleY(1)}
+.svc-card:hover{background:var(--off);transform:translateX(4px)}
+.svc-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sage);margin-bottom:12px;font-weight:600}
+.svc-card h3{font-size:22px;font-weight:400;margin-bottom:10px;letter-spacing:.5px}
+.svc-card p{color:var(--muted);font-size:13px;line-height:1.7;font-weight:300}
+
+.team-section{background:var(--black);color:#fff}
+.team-section .sh h2{color:#fff}
+.team-section .sh p{color:rgba(255,255,255,.4)}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;max-width:1000px;margin:0 auto;text-align:center}
+.tc{padding:28px 16px;border:1px solid rgba(255,255,255,.06);transition:.3s}
+.tc:hover{border-color:rgba(125,139,117,.3);background:rgba(255,255,255,.02)}
+.tc-init{width:56px;height:56px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Italiana',serif;font-size:20px;color:#fff}
+.tc h4{font-size:14px;margin-bottom:4px;color:var(--sage-light);font-weight:500}
+.tc p{color:rgba(255,255,255,.35);font-size:11px;font-weight:300;letter-spacing:.3px}
+
+.reviews{background:var(--off)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.rc{background:var(--white);padding:30px;border:1px solid rgba(0,0,0,.04)}
+.rc .stars{color:var(--sage);font-size:15px;margin-bottom:14px;letter-spacing:2px}
+.rc p{font-size:13px;line-height:1.8;color:var(--muted);font-style:italic;margin-bottom:14px;font-weight:300}
+.rc strong{color:var(--sage-dark);font-size:12px;font-weight:600;letter-spacing:.5px}
+
+.ct-bg{background:var(--white)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:960px;margin:0 auto;align-items:center}
+.ct-info h3{font-size:30px;font-weight:400;margin-bottom:16px;letter-spacing:1px}
+.ct-info>p{color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300}
+.ct-d{display:flex;gap:12px;margin-bottom:14px;font-size:14px;align-items:center;font-weight:300}
+.ct-form{background:var(--off);padding:38px;border:1px solid rgba(0,0,0,.04)}
+.ct-form input,.ct-form select,.ct-form textarea{width:100%;padding:14px 16px;border:1px solid #DDD;border-radius:0;font-family:'Sora',sans-serif;font-size:13px;margin-bottom:14px;transition:.3s;font-weight:300;background:var(--white)}
+.ct-form input:focus,.ct-form select:focus,.ct-form textarea:focus{outline:none;border-color:var(--sage)}
+.ct-form textarea{height:90px;resize:vertical}
+.ct-form button{width:100%;background:var(--sage);color:#fff;padding:16px;border:none;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.3s;font-family:'Sora',sans-serif}
+.ct-form button:hover{background:var(--sage-dark)}
+
+footer{background:var(--black);color:rgba(255,255,255,.35);padding:48px 40px 28px;text-align:center}
+.f-logo{font-family:'Italiana',serif;font-size:28px;color:var(--white);letter-spacing:3px;margin-bottom:10px}.f-logo span{color:var(--sage-light)}
+.f-links{display:flex;justify-content:center;gap:28px;margin:16px 0}.f-links a{color:rgba(255,255,255,.35);text-decoration:none;font-size:11px;letter-spacing:1px;text-transform:uppercase}.f-links a:hover{color:var(--sage-light)}
+.f-social{margin-top:14px;font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:768px){
+.hero h1{font-size:34px}.hero-stats{flex-direction:column;gap:20px}.hero-btns{flex-direction:column;align-items:center}
+.about-grid,.about-highlights,.ct-grid{grid-template-columns:1fr}
+.nav-links{display:none}nav{padding:12px 18px}section{padding:60px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">The <span>Look</span></div>
+<ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#team">Team</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul>
+<a href="#contact" class="nav-cta">Book Now</a>
+</nav>
+
+<section class="hero"><div class="hero-inner">
+<div class="diamond-badge">&#128142; Allergan Diamond Provider</div>
+<h1>Your Best <em>Look</em></h1>
+<p>A clean, beautiful, simple experience. Honest and professional care that boosts your unique look so you still feel like your most natural self.</p>
+<div class="hero-btns"><a href="#contact" class="btn-s">Schedule Consultation</a><a href="#services" class="btn-t">View Services</a></div>
+<div class="hero-stats">
+<div class="st"><b>4.9&#9733;</b><span>Google Rating</span></div>
+<div class="st"><b>380+</b><span>5-Star Reviews</span></div>
+<div class="st"><b>40+</b><span>Years Combined Experience</span></div>
+</div>
+</div></section>
+
+<div class="diamond-bar">
+<p>&#128142; Allergan Diamond Status &#8212; Highest Possible Distinction</p>
+<div class="diamond-sub">One of the highest volumes of Botox and Juvederm injections in Nevada. Nationally recognized excellence.</div>
+</div>
+
+<section class="about-section" id="about">
+<div class="about-grid">
+<div class="about-text">
+<div class="s-line" style="margin:0 0 18px"></div>
+<h3>Your Personal High-End Boutique Med Spa</h3>
+<p>At The Look Med Spa, our team of knowledgeable injectors, skincare specialists, and technicians help you make the most out of your investment in yourself. We are here for you at every stage of your cosmetic journey.</p>
+<p>With years of combined industry experience in the leading treatments and products, we offer the most personalized approach to beauty you will find.</p>
+<div class="about-highlights">
+<div class="ah"><h4>Diamond Provider</h4><p>Highest Allergan distinction for Botox and Juvederm volume.</p></div>
+<div class="ah"><h4>99% Satisfaction</h4><p>Our client satisfaction rate speaks for itself.</p></div>
+<div class="ah"><h4>80% Retention</h4><p>Clients keep coming back because results matter.</p></div>
+<div class="ah"><h4>6 Expert Providers</h4><p>Advanced degrees and certifications in aesthetic medicine.</p></div>
+</div>
+</div>
+<div class="about-stats">
+<div class="as"><b>Top 5</b><span>EZGel Provider in the Country</span></div>
+<div class="as"><b>Diamond</b><span>Alle Diamond Level Provider</span></div>
+<div class="as"><b>6</b><span>Expert Providers on Staff</span></div>
+</div>
+</div>
+</section>
+
+<section class="svc-bg" id="services">
+<div class="sh"><div class="s-line"></div><h2>Services</h2><p>Industry-leading treatments tailored to your unique cosmetic goals</p></div>
+<div class="svc-grid">
+<div class="svc-card"><div class="svc-label">Injectables</div><h3>Botox &amp; Neurotoxins</h3><p>Botox, Dysport, and Xeomin by Diamond-level injectors. Precise, natural results for lines and wrinkles.</p></div>
+<div class="svc-card"><div class="svc-label">Injectables</div><h3>Dermal Fillers</h3><p>Juvederm, Voluma, Sculptra, Radiesse, RHA, and EZGel. Lip enhancement, facial contouring, and volume restoration.</p></div>
+<div class="svc-card"><div class="svc-label">Skin</div><h3>HydraFacial</h3><p>Deep cleansing, exfoliation, extraction, and hydration. Instant glow with zero downtime.</p></div>
+<div class="svc-card"><div class="svc-label">Laser</div><h3>Laser Treatments</h3><p>Sciton BBL, laser hair removal, skin resurfacing, and vein treatment using the latest laser technology.</p></div>
+<div class="svc-card"><div class="svc-label">Skin</div><h3>Microneedling</h3><p>Collagen induction therapy for fine lines, acne scars, pores, and overall skin rejuvenation.</p></div>
+<div class="svc-card"><div class="svc-label">Skin</div><h3>Chemical Peels</h3><p>Medical-grade peels for pigmentation, texture, fine lines, and overall skin clarity and tone.</p></div>
+<div class="svc-card"><div class="svc-label">Skin</div><h3>Dermaplaning</h3><p>Gentle exfoliation to remove dead skin and peach fuzz. Instantly smoother, brighter skin.</p></div>
+<div class="svc-card"><div class="svc-label">Wellness</div><h3>Hormone &amp; IV Therapy</h3><p>HRT, testosterone therapy, and custom IV infusions for energy, wellness, and recovery.</p></div>
+<div class="svc-card"><div class="svc-label">Products</div><h3>ZO Skin Health</h3><p>Premium medical-grade skincare products. Tailored regimens for your skin type and goals.</p></div>
+</div>
+</section>
+
+<section class="team-section" id="team">
+<div class="sh"><div class="s-line"></div><h2>Our Team</h2><p>Let us work together and have fun doing it</p></div>
+<div class="team-grid">
+<div class="tc"><div class="tc-init">H</div><h4>Hayley</h4><p>PA-C, Lead Injector, Facial Anatomy Expert</p></div>
+<div class="tc"><div class="tc-init">N</div><h4>Niki</h4><p>PA-C, Aesthetics &amp; Facial Balancing</p></div>
+<div class="tc"><div class="tc-init">P</div><h4>Pam</h4><p>RN, BSN, Injector &amp; IV Specialist</p></div>
+<div class="tc"><div class="tc-init">D</div><h4>Diana</h4><p>Aesthetician, 25+ Years Experience</p></div>
+<div class="tc"><div class="tc-init">H</div><h4>Helen</h4><p>Aesthetician &amp; Beauty Artist</p></div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="sh"><div class="s-line"></div><h2>What Clients Say</h2><p>Real results from real patients at The Look</p></div>
+<div class="rev-grid">
+<div class="rc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I have been getting treatments done by Hayley several times now and every time she does an amazing job and goes above and beyond for my aesthetic concerns."</p><strong>Verified Patient</strong></div>
+<div class="rc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Been going to this medspa for about two years now and everything about it is amazing. From the talented injectors to the beautiful decor. So glad I trusted Hayley's advice."</p><strong>Verified Patient</strong></div>
+<div class="rc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The Look is my absolute favorite. The team is knowledgeable, the office is gorgeous, and my results always look natural. Would not go anywhere else."</p><strong>Verified Patient</strong></div>
+</div>
+</section>
+
+<section class="ct-bg" id="contact">
+<div class="sh"><div class="s-line"></div><h2>Schedule Your Consultation</h2><p>Your personal boutique med spa experience starts here</p></div>
+<div class="ct-grid">
+<div class="ct-info">
+<h3>Visit The Look</h3>
+<p>We are in the center courtyard. Schedule your consultation and let our team create the perfect treatment plan for your goals.</p>
+<div class="ct-d">&#128205; 7530 W Sahara Ave #105, Las Vegas, NV 89117</div>
+<div class="ct-d">&#128222; (702) 246-2238</div>
+<div class="ct-d">&#9993;&#65039; info@thelookmedspalv.com</div>
+<div class="ct-d">&#128336; Mon-Fri 9:15AM-5PM | By Appointment</div>
+<div class="ct-d">&#127760; thelookmedspalv.com</div>
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+<span style="background:var(--off);padding:6px 14px;font-size:11px;color:var(--sage-dark);font-weight:500;letter-spacing:.5px">@thelookmedspalv</span>
+<span style="background:var(--off);padding:6px 14px;font-size:11px;color:var(--sage-dark);font-weight:500;letter-spacing:.5px">17K Followers</span>
+</div>
+</div>
+<div class="ct-form"><input placeholder="Full Name"><input placeholder="Phone Number"><input placeholder="Email Address">
+<select><option>Service Interested In</option><option>Botox / Dysport / Xeomin</option><option>Dermal Fillers / Lip Injections</option><option>EZGel</option><option>HydraFacial</option><option>Laser Treatment / BBL</option><option>Microneedling</option><option>Chemical Peel</option><option>Dermaplaning</option><option>Hormone Therapy</option><option>IV Therapy</option><option>ZO Skincare Consultation</option><option>Other</option></select>
+<textarea placeholder="Tell us about your goals"></textarea>
+<button>Request Consultation</button></div>
+</div>
+</section>
+
+<footer>
+<div class="f-logo">The <span>Look</span></div>
+<p>7530 W Sahara Ave #105 | Las Vegas, NV 89117</p>
+<div class="f-links"><a href="#about">About</a><a href="#services">Services</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+<div class="f-social">@thelookmedspalv | @hay_the_pa | @diana_thelookmedspa | @nurseniki_</div>
+<p style="margin-top:18px;font-size:10px">&#169; 2026 The Look Med Spa. All rights reserved.</p>
+</footer>
+
+<script src="//code.tidio.co/bkxtikascgvotnu1f1gwy4gwel2ypokn.js" async></script>
+</body>
+</html>
