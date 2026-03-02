@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrimBody M.D. | Medical Weight Loss Las Vegas</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#00A89D;--teal-dark:#008F86;--teal-light:#00C4B8;--navy:#0D1B2A;--navy-light:#1B2D45;--white:#FFFFFF;--offwhite:#F4F9F8;--text:#1A1A2E;--muted:#5C6B7A;--gradient:linear-gradient(135deg,#00A89D 0%,#008F86 100%)}
+body{font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,27,42,.97);backdrop-filter:blur(12px);padding:14px 40px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;color:var(--white)}.logo span{color:var(--teal)}
+.nav-links{display:flex;gap:28px;list-style:none}.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500;transition:.3s}.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--gradient);color:#fff;padding:11px 26px;border:none;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:.3s}
+.nav-cta:hover{transform:scale(1.05);box-shadow:0 4px 20px rgba(0,168,157,.4)}
+
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:100px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,168,157,.15),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(0,168,157,.08),transparent 70%);border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:center;position:relative;z-index:2}
+.hero-text h1{color:var(--white);font-size:52px;font-weight:800;line-height:1.1;margin-bottom:20px}
+.hero-text h1 span{color:var(--teal);display:block}
+.hero-text p{color:rgba(255,255,255,.65);font-size:17px;line-height:1.8;margin-bottom:32px;max-width:480px}
+.hero-btn{background:var(--gradient);color:#fff;padding:16px 40px;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:.3s}
+.hero-btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,168,157,.4)}
+.hero-form{background:var(--white);border-radius:16px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.hero-form h3{font-size:22px;margin-bottom:6px;color:var(--navy)}
+.hero-form p.sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+.hero-form input,.hero-form select{width:100%;padding:14px 16px;border:1px solid #E2E8F0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;margin-bottom:14px;transition:.3s}
+.hero-form input:focus,.hero-form select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,168,157,.1)}
+.hero-form button{width:100%;background:var(--gradient);color:#fff;padding:16px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Montserrat',sans-serif}
+.hero-form button:hover{box-shadow:0 6px 20px rgba(0,168,157,.4)}
+
+.stats-bar{background:var(--white);padding:40px 60px;display:flex;justify-content:center;gap:60px;box-shadow:0 4px 20px rgba(0,0,0,.06);position:relative;z-index:3}
+.stat-item{text-align:center}
+.stat-item .num{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--teal)}
+.stat-item .label{color:var(--muted);font-size:13px;margin-top:4px;font-weight:500}
+
+section{padding:90px 40px}
+.sh{text-align:center;max-width:580px;margin:0 auto 56px}
+.sh h2{font-size:38px;font-weight:700;margin-bottom:14px}
+.sh p{color:var(--muted);font-size:16px;line-height:1.7}
+.teal-line{width:50px;height:3px;background:var(--gradient);margin:0 auto 18px;border-radius:10px}
+
+.svc-bg{background:var(--offwhite)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.svc-card{background:var(--white);padding:36px 28px;border-radius:12px;border:1px solid rgba(0,0,0,.04);transition:.3s;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient);transform:scaleX(0);transition:.3s;transform-origin:left}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.svc-icon{width:56px;height:56px;background:var(--offwhite);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+.svc-card h3{font-size:18px;font-weight:600;margin-bottom:10px}
+.svc-card p{color:var(--muted);font-size:14px;line-height:1.7}
+
+.results{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.results::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,168,157,.12),transparent 70%);border-radius:50%}
+.results .sh h2{color:#fff}
+.results .sh p{color:rgba(255,255,255,.55)}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.result-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:32px;transition:.3s}
+.result-card:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.result-card .stars{color:var(--teal);font-size:16px;margin-bottom:12px}
+.result-card p{color:rgba(255,255,255,.7);font-size:14px;line-height:1.7;font-style:italic;margin-bottom:14px}
+.result-card strong{color:var(--teal);font-size:13px}
+
+.programs{background:var(--offwhite)}
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.prog-card{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:.3s}
+.prog-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.prog-top{background:var(--gradient);padding:24px;color:#fff;text-align:center}
+.prog-top h3{font-size:20px;font-weight:700}
+.prog-body{padding:28px}
+.prog-body ul{list-style:none;margin-bottom:20px}
+.prog-body li{padding:8px 0;color:var(--muted);font-size:14px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:8px}
+.prog-body li::before{content:'';display:inline-block;width:6px;height:6px;background:var(--teal);border-radius:50%;flex-shrink:0}
+.prog-btn{display:block;width:100%;text-align:center;background:var(--offwhite);color:var(--teal);padding:14px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Montserrat',sans-serif}
+.prog-btn:hover{background:var(--teal);color:#fff}
+
+.cta-section{background:var(--gradient);padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);border-radius:50%}
+.cta-section h2{color:#fff;font-size:38px;font-weight:700;margin-bottom:16px;position:relative;z-index:2}
+.cta-section p{color:rgba(255,255,255,.85);font-size:17px;margin-bottom:32px;position:relative;z-index:2}
+.cta-btn{background:#fff;color:var(--teal);padding:16px 40px;border:none;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:.3s;position:relative;z-index:2;font-family:'Montserrat',sans-serif}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+
+.contact-section{background:var(--offwhite)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1000px;margin:0 auto;align-items:center}
+.ct-info h3{font-size:28px;font-weight:700;margin-bottom:16px}
+.ct-info>p{color:var(--muted);line-height:1.8;margin-bottom:24px}
+.ct-detail{display:flex;gap:12px;margin-bottom:14px;font-size:15px;align-items:center}
+.ct-detail span{font-size:20px}
+.ct-form{background:var(--white);padding:36px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.ct-form input,.ct-form select,.ct-form textarea{width:100%;padding:14px 16px;border:1px solid #E2E8F0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;margin-bottom:14px;transition:.3s}
+.ct-form input:focus,.ct-form select:focus,.ct-form textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,168,157,.1)}
+.ct-form textarea{height:90px;resize:vertical}
+.ct-form button{width:100%;background:var(--gradient);color:#fff;padding:16px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Montserrat',sans-serif;transition:.3s}
+.ct-form button:hover{box-shadow:0 6px 20px rgba(0,168,157,.4)}
+
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:48px 40px 28px;text-align:center}
+.f-logo{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:8px}.f-logo span{color:var(--teal)}
+footer p{font-size:13px;line-height:1.8}
+.f-links{display:flex;justify-content:center;gap:24px;margin:18px 0}.f-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:13px}.f-links a:hover{color:var(--teal)}
+.f-locations{display:flex;justify-content:center;gap:32px;margin:14px 0;flex-wrap:wrap}.f-locations span{color:rgba(255,255,255,.4);font-size:12px}
+
+@media(max-width:768px){
+.hero-grid{grid-template-columns:1fr;text-align:center}.hero-text h1{font-size:34px}.hero-text p{margin:0 auto 32px}
+.stats-bar{flex-direction:column;gap:20px;padding:30px 20px}
+.ct-grid{grid-template-columns:1fr}
+.nav-links{display:none}nav{padding:12px 18px}section{padding:60px 20px}.hero{padding:100px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Trim<span>Body</span> M.D.</div>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a href="#contact" class="nav-cta">Free Consultation</a>
+</nav>
+
+<section class="hero">
+<div class="hero-grid">
+<div class="hero-text">
+<h1>Lose the Weight. <span>Love Your Life.</span></h1>
+<p>Medically supervised weight loss programs tailored to your body, your goals, and your lifestyle. Join 30,000+ patients who transformed their health with TrimBody M.D.</p>
+<a href="#contact" class="hero-btn">Schedule Your Free Consultation</a>
+</div>
+<div class="hero-form">
+<h3>Free Consultation</h3>
+<p class="sub">Start your transformation today. No obligation.</p>
+<input type="text" placeholder="First Name">
+<input type="text" placeholder="Last Name">
+<input type="tel" placeholder="Phone Number">
+<input type="email" placeholder="Email Address">
+<select>
+<option>Choose Location</option>
+<option>Summerlin, NV</option>
+<option>Henderson, NV</option>
+<option>Las Vegas, NV</option>
+</select>
+<select>
+<option>What can we help you with?</option>
+<option>Semaglutide / Wegovy / Ozempic</option>
+<option>Tirzepatide / Mounjaro / Zepbound</option>
+<option>HCG Weight Loss Program</option>
+<option>Super Shot / B12 Program</option>
+<option>Testosterone Therapy</option>
+<option>Cosmetic Services (Botox, Fillers)</option>
+<option>Body Sculpting</option>
+<option>IV Therapy</option>
+<option>Other</option>
+</select>
+<button>Schedule My Free Consultation</button>
+</div>
+</div>
+</section>
+
+<div class="stats-bar">
+<div class="stat-item"><div class="num">30,400+</div><div class="label">Satisfied Patients</div></div>
+<div class="stat-item"><div class="num">4.9&#9733;</div><div class="label">Google Rating</div></div>
+<div class="stat-item"><div class="num">100%</div><div class="label">Report Improved Energy</div></div>
+<div class="stat-item"><div class="num">6"</div><div class="label">Avg. Waist Reduction</div></div>
+</div>
+
+<section class="svc-bg" id="services">
+<div class="sh"><div class="teal-line"></div><h2>Our Services</h2><p>Comprehensive weight loss and wellness programs overseen by licensed medical professionals</p></div>
+<div class="svc-grid">
+<div class="svc-card"><div class="svc-icon">&#128137;</div><h3>Semaglutide Injections</h3><p>Wegovy and Ozempic Semaglutide weight loss programs. Doctor prescribed and medically supervised for safe, effective results.</p></div>
+<div class="svc-card"><div class="svc-icon">&#9889;</div><h3>Tirzepatide Injections</h3><p>Mounjaro and Zepbound programs for enhanced weight loss. The latest in GLP-1 medication therapy.</p></div>
+<div class="svc-card"><div class="svc-icon">&#128170;</div><h3>Super Shot Program</h3><p>B12, Vitamin D, and ALA injections combined with weekly vitals, progress analysis, and a personalized fitness plan.</p></div>
+<div class="svc-card"><div class="svc-icon">&#129516;</div><h3>Testosterone Therapy</h3><p>Hormone replacement therapy to restore energy, metabolism, and vitality. Complete lab work and ongoing monitoring.</p></div>
+<div class="svc-card"><div class="svc-icon">&#10024;</div><h3>Cosmetic Services</h3><p>Botox, Juvederm, chemical peels, laser treatments, Morpheus8, and Cryoskin body sculpting.</p></div>
+<div class="svc-card"><div class="svc-icon">&#128167;</div><h3>IV Therapy</h3><p>Custom IV infusions for hydration, energy, immune support, and recovery. Feel the difference immediately.</p></div>
+</div>
+</section>
+
+<section class="results" id="results">
+<div class="sh"><div class="teal-line"></div><h2>Real Patients. Real Results.</h2><p>Join thousands who have transformed their health with TrimBody M.D.</p></div>
+<div class="results-grid">
+<div class="result-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The experience by Juliet and Maria has been over the top. Not only am I down 28 lbs and counting, these ladies give off the best positive vibes."</p><strong>Verified Patient</strong></div>
+<div class="result-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The Trimbody team has been fantastic in every way. We are both losing weight without the negative aspects dieting so often entails."</p><strong>Verified Patient</strong></div>
+<div class="result-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I have lost over 20 pounds so far and loving every minute. The staff is amazing and willing to work with your schedule to help you achieve your goals."</p><strong>Verified Patient</strong></div>
+</div>
+</section>
+
+<section class="programs" id="programs">
+<div class="sh"><div class="teal-line"></div><h2>Weight Loss Programs</h2><p>Medical-grade programs designed for lasting results. Every plan includes a free consultation.</p></div>
+<div class="prog-grid">
+<div class="prog-card">
+<div class="prog-top"><h3>Semaglutide Program</h3></div>
+<div class="prog-body">
+<ul>
+<li>Initial medical examination</li>
+<li>Doctor prescribed Semaglutide</li>
+<li>Weekly B12 vitamin injections</li>
+<li>Weekly vitals and progress tracking</li>
+<li>Personalized nutrition plan</li>
+<li>Ongoing medical supervision</li>
+</ul>
+<button class="prog-btn">Schedule Free Consultation</button>
+</div>
+</div>
+<div class="prog-card">
+<div class="prog-top"><h3>Tirzepatide Program</h3></div>
+<div class="prog-body">
+<ul>
+<li>Initial medical examination</li>
+<li>Doctor prescribed Tirzepatide</li>
+<li>Weekly B12 vitamin injections</li>
+<li>Weekly vitals and progress tracking</li>
+<li>Personalized fitness and meal plan</li>
+<li>Ongoing medical supervision</li>
+</ul>
+<button class="prog-btn">Schedule Free Consultation</button>
+</div>
+</div>
+<div class="prog-card">
+<div class="prog-top"><h3>Super Shot Program</h3></div>
+<div class="prog-body">
+<ul>
+<li>Initial medical examination</li>
+<li>3 weekly TrimBody M.D. shots</li>
+<li>B12, Vitamin D, and ALA injections</li>
+<li>Weekly vitals and progress analysis</li>
+<li>Fitness and meal plan</li>
+<li>Great add-on to any program</li>
+</ul>
+<button class="prog-btn">Schedule Free Consultation</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>Your Transformation Starts Today</h2>
+<p>Free consultation. No obligation. Let our medical team help you achieve your body goals.</p>
+<a href="#contact" class="cta-btn">Get Started Now</a>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="sh"><div class="teal-line"></div><h2>Contact Us</h2><p>Schedule your free, no-obligation consultation today</p></div>
+<div class="ct-grid">
+<div class="ct-info">
+<h3>Visit TrimBody M.D.</h3>
+<p>Walk in or call to schedule your free consultation. Our medical team is ready to help you reach your goals.</p>
+<div class="ct-detail"><span>&#128205;</span> 10300 W Charleston Blvd #21, Las Vegas, NV 89135</div>
+<div class="ct-detail"><span>&#128222;</span> (702) 541-9458</div>
+<div class="ct-detail"><span>&#128336;</span> Mon-Fri 9:30AM - 5:30PM</div>
+<div class="ct-detail"><span>&#127760;</span> trimbodymd.com</div>
+<div style="margin-top:24px;padding:20px;background:var(--offwhite);border-radius:8px;border-left:3px solid var(--teal)">
+<p style="font-size:14px;color:var(--navy);font-weight:600;margin-bottom:4px">Locations Across Nevada &amp; California</p>
+<p style="font-size:13px;color:var(--muted)">Las Vegas | Henderson | Summerlin | Costa Mesa | Torrance | San Marcos</p>
+</div>
+</div>
+<div class="ct-form">
+<input placeholder="First Name"><input placeholder="Last Name">
+<input placeholder="Phone Number"><input placeholder="Email Address">
+<select><option>Choose Location</option><option>Summerlin, NV</option><option>Henderson, NV</option><option>Las Vegas, NV</option></select>
+<select><option>What can we help you with?</option><option>Weight Loss</option><option>Semaglutide / Tirzepatide</option><option>Testosterone Therapy</option><option>Cosmetic Services</option><option>IV Therapy</option><option>Other</option></select>
+<textarea placeholder="Tell us about your goals"></textarea>
+<button>Schedule My Free Consultation</button>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="f-logo">Trim<span>Body</span> M.D.</div>
+<p>The Leader in Weight Loss &amp; Anti-Aging</p>
+<div class="f-links"><a href="#services">Services</a><a href="#results">Results</a><a href="#programs">Programs</a><a href="#contact">Contact</a></div>
+<div class="f-locations"><span>Las Vegas</span><span>Henderson</span><span>Summerlin</span><span>Costa Mesa</span><span>Torrance</span><span>San Marcos</span></div>
+<p style="margin-top:20px;font-size:11px">&#169; 2026 TrimBody M.D. All rights reserved.</p>
+</footer>
+
+<script src="//code.tidio.co/1fqnp9tocjvqh107gydv2xwhq9psfo5o.js" async></script>
+</body>
+</html>
