@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Vegas Aesthetics | Thomas Pulice PA-C</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#5b8a9a;--bl:#7ab0c2;--dk:#141a1e;--dkr:#0e1316;--tx:#e4eaed;--mt:#8a9ba4}
+body{font-family:'Inter',sans-serif;background:var(--dkr);color:var(--tx);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(14,19,22,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(91,138,154,0.1)}
+.nl{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--blue)}
+.nk{display:flex;gap:28px;align-items:center}
+.nk a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--mt);transition:color .3s}
+.nk a:hover{color:var(--blue)}
+.nc{background:var(--blue);color:white;padding:10px 24px;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+.hbg{position:absolute;inset:0;background:linear-gradient(135deg,#141a20,#121820,#0e1316)}
+.hc{position:relative;z-index:2;max-width:750px;padding:0 20px}
+.ht{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--blue);margin-bottom:30px;opacity:0;animation:fu .8s ease forwards .3s}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,5.5vw,4rem);font-weight:400;line-height:1.2;margin-bottom:20px;opacity:0;animation:fu .8s ease forwards .5s}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hs{font-size:.88rem;color:var(--mt);line-height:1.8;max-width:500px;margin:0 auto 40px;font-weight:300;opacity:0;animation:fu .8s ease forwards .7s}
+.hb{display:inline-block;background:var(--blue);color:white;padding:16px 48px;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;transition:all .4s;opacity:0;animation:fu .8s ease forwards .9s}
+.hb:hover{background:var(--bl)}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.sla{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--blue);text-align:center;margin-bottom:16px}
+.st{font-family:'DM Serif Display',serif;font-size:2.2rem;text-align:center;margin-bottom:50px}
+.intro{padding:100px 40px;text-align:center;max-width:800px;margin:0 auto}
+.intro p{color:var(--mt);line-height:2;font-size:.88rem;font-weight:300}
+.svc{padding:80px 40px 100px;max-width:1100px;margin:0 auto}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.sc{background:rgba(91,138,154,0.04);border:1px solid rgba(91,138,154,0.1);padding:36px 28px;text-align:center;transition:all .4s}
+.sc:hover{border-color:rgba(91,138,154,0.3);transform:translateY(-3px)}
+.sc h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:10px}
+.sc p{color:var(--mt);font-size:.78rem;line-height:1.7;font-weight:300}
+.prov{padding:100px 40px;background:rgba(91,138,154,0.04);border-top:1px solid rgba(91,138,154,0.08);border-bottom:1px solid rgba(91,138,154,0.08);text-align:center;max-width:800px;margin:0 auto}
+.prov .pn{color:var(--blue);font-family:'DM Serif Display',serif;font-size:1.6rem;display:block;margin-bottom:16px}
+.prov .pt{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.prov p{color:var(--mt);font-size:.88rem;line-height:1.9;font-weight:300}
+.inf{padding:80px 40px;max-width:1000px;margin:0 auto}
+.ig{display:grid;grid-template-columns:1fr 1fr 1fr;gap:50px;text-align:center}
+.ib h3{font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:14px;color:var(--blue)}
+.ib p{color:var(--mt);font-size:.82rem;line-height:1.8;font-weight:300}
+footer{padding:50px 40px;text-align:center;border-top:1px solid rgba(91,138,154,0.08)}
+.flogo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--blue);margin-bottom:14px}
+footer p{color:var(--mt);font-size:.72rem}
+footer a{color:var(--blue)}
+@media(max-width:768px){.nk{display:none}.ig{grid-template-columns:1fr}nav{padding:16px 20px}.intro,.svc,.prov,.inf{padding:60px 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nl">Las Vegas Aesthetics</div><div class="nk"><a href="#services">Services</a><a href="#provider">Provider</a><a href="#contact">Contact</a><button class="nc">Book Now</button></div></nav>
+<section class="hero"><div class="hbg"></div><div class="hc"><p class="ht">W Sahara · Las Vegas</p><h1>Precision Aesthetics.<br><em>World-Class</em> Results.</h1><p class="hs">Presidential-level injectable artistry and advanced regenerative treatments from a provider trusted by patients across 20+ countries.</p><a href="#contact" class="hb">Schedule Consultation</a></div></section>
+<section class="intro"><h2 class="st">Beyond Ordinary Aesthetics</h2><p>Las Vegas Aesthetics delivers results-driven treatments combining advanced injection techniques with cutting-edge regenerative medicine. Every treatment plan is customized to your unique anatomy and goals.</p></section>
+<section class="svc" id="services"><p class="sla">Treatments</p><h2 class="st">Advanced Procedures</h2><div class="sg"><div class="sc"><h3>Botox & Dysport</h3><p>Precision neuromodulator injections for natural, refreshed results from an expert-level injector.</p></div><div class="sc"><h3>Dermal Fillers</h3><p>Artistic volume restoration and facial contouring using premium hyaluronic acid fillers.</p></div><div class="sc"><h3>P-Shot & O-Shot</h3><p>PRP-based regenerative treatments for sexual wellness and rejuvenation.</p></div><div class="sc"><h3>Focused Shockwave</h3><p>Non-invasive shockwave therapy for tissue regeneration and enhanced performance.</p></div><div class="sc"><h3>PRP Hair Restoration</h3><p>Platelet-rich plasma therapy to stimulate natural hair growth and reduce thinning.</p></div><div class="sc"><h3>Vampire Facial</h3><p>PRP microneedling combining your own growth factors with micro-channels for dramatic skin renewal.</p></div></div></section>
+<section class="prov" id="provider"><p class="sla">Your Provider</p><span class="pn">Thomas Pulice, PA-C</span><div class="pt">Presidential Level Injector</div><p>With patients traveling from over 20 countries, Thomas Pulice has established himself as one of the most sought-after aesthetic providers in Las Vegas. His precision technique and artistic approach deliver natural, transformative results.</p></section>
+<section class="inf" id="contact"><div class="ig"><div class="ib"><h3>Location</h3><p>9081 W Sahara Ave<br>Suite 230<br>Las Vegas, NV 89117</p></div><div class="ib"><h3>Hours</h3><p>Mon-Fri: 10am-6pm<br>Sat: By Appointment<br>Sunday: Closed</p></div><div class="ib"><h3>Contact</h3><p>Phone: <a href="tel:7023331151">(702) 333-1151</a><br>lasvegasaesthetics.com</p></div></div></section>
+<footer><div class="flogo">Las Vegas Aesthetics</div><p>&copy; 2026 Las Vegas Aesthetics. All Rights Reserved.</p></footer>
+<script src="//code.tidio.co/1fqnp9tocjvqh107gydv2xwhq9psfo5o.js" async></script>
+</body>
+</html>

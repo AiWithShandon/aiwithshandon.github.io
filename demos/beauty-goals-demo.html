@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Goals LV | Las Vegas Med Spa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--rose:#d4a0a0;--rl:#e8c4c4;--dk:#2a2025;--dkr:#1e181c;--tx:#f0e8e4;--mt:#b8a8a0}
+body{font-family:'Raleway',sans-serif;background:var(--dkr);color:var(--tx);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(30,24,28,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,160,160,0.1)}
+.nl{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--rose)}
+.nk{display:flex;gap:28px;align-items:center}
+.nk a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--mt);transition:color .3s}
+.nk a:hover{color:var(--rose)}
+.nc{background:var(--rose);color:var(--dkr);padding:10px 24px;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all .3s}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+.hbg{position:absolute;inset:0;background:linear-gradient(135deg,#2a1f25,#261e28,#1e1820)}
+.hp{position:absolute;inset:0;opacity:.03;background-image:radial-gradient(circle at 30% 30%,var(--rose) 1px,transparent 1px);background-size:50px 50px}
+.hc{position:relative;z-index:2;max-width:750px;padding:0 20px}
+.ht{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--rose);margin-bottom:30px;opacity:0;animation:fu .8s ease forwards .3s}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.5vw,4rem);font-weight:400;line-height:1.2;margin-bottom:20px;opacity:0;animation:fu .8s ease forwards .5s}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hsub{font-size:.88rem;color:var(--mt);line-height:1.8;max-width:480px;margin:0 auto 40px;font-weight:300;opacity:0;animation:fu .8s ease forwards .7s}
+.hbtn{display:inline-block;background:var(--rose);color:var(--dkr);padding:16px 48px;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;transition:all .4s;opacity:0;animation:fu .8s ease forwards .9s}
+.hbtn:hover{background:var(--rl)}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.sl{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--rose);text-align:center;margin-bottom:16px}
+.st{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:400;text-align:center;margin-bottom:50px}
+.intro{padding:100px 40px;text-align:center;max-width:800px;margin:0 auto}
+.intro p{color:var(--mt);line-height:2;font-size:.88rem;font-weight:300}
+.svc{padding:80px 40px 100px;max-width:1100px;margin:0 auto}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.sc{background:rgba(212,160,160,0.04);border:1px solid rgba(212,160,160,0.1);padding:36px 28px;text-align:center;transition:all .4s}
+.sc:hover{border-color:rgba(212,160,160,0.3);transform:translateY(-3px)}
+.sc h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;margin-bottom:10px}
+.sc p{color:var(--mt);font-size:.78rem;line-height:1.7;font-weight:300}
+.sb{display:flex;justify-content:center;gap:60px;padding:80px 40px;background:rgba(212,160,160,0.04);border-top:1px solid rgba(212,160,160,0.08);border-bottom:1px solid rgba(212,160,160,0.08)}
+.stat{text-align:center}
+.sn{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--rose)}
+.sla{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--mt);margin-top:8px}
+.team{padding:100px 40px;max-width:900px;margin:0 auto;text-align:center}
+.team p{color:var(--mt);font-size:.88rem;line-height:1.9;font-weight:300;max-width:700px;margin:0 auto 16px}
+.hl{color:var(--rose);font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem}
+.inf{padding:80px 40px;max-width:1000px;margin:0 auto}
+.ig{display:grid;grid-template-columns:1fr 1fr 1fr;gap:50px;text-align:center}
+.ib h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:14px;color:var(--rose)}
+.ib p{color:var(--mt);font-size:.82rem;line-height:1.8;font-weight:300}
+footer{padding:50px 40px;text-align:center;border-top:1px solid rgba(212,160,160,0.08)}
+.flogo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--rose);margin-bottom:14px}
+footer p{color:var(--mt);font-size:.72rem}
+footer a{color:var(--rose)}
+@media(max-width:768px){.nk{display:none}.ig{grid-template-columns:1fr}.sb{flex-direction:column;gap:30px}nav{padding:16px 20px}.intro,.svc,.team,.inf{padding:60px 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nl">Beauty Goals LV</div><div class="nk"><a href="#services">Services</a><a href="#team">About</a><a href="#contact">Contact</a><button class="nc">Book Now</button></div></nav>
+<section class="hero"><div class="hbg"></div><div class="hp"></div><div class="hc"><p class="ht">West Sahara · Las Vegas</p><h1>Your Beauty.<br><em>Your Goals.</em></h1><p class="hsub">Expert aesthetics tailored to you — from advanced injectables to cutting-edge skin rejuvenation, delivered by providers who truly care.</p><a href="#contact" class="hbtn">Book a Consultation</a></div></section>
+<section class="intro"><h2 class="st">Where Science Meets Beauty</h2><p>At Beauty Goals LV, every client deserves personalized care from experienced providers. Led by Michelle Tio-Nguyen, NP — a master injector — our team combines clinical expertise with an artistic eye to help you look and feel your absolute best.</p></section>
+<section class="svc" id="services"><p class="sl">Our Services</p><h2 class="st">Advanced Aesthetic Treatments</h2><div class="sg"><div class="sc"><h3>Botox & Fillers</h3><p>Expert injections by a master injector. Smooth wrinkles, restore volume, and enhance your natural features.</p></div><div class="sc"><h3>HydraFacial & DiamondGlow</h3><p>Deep cleanse, extract, and hydrate with medical-grade facial treatments for an instant glow.</p></div><div class="sc"><h3>RF Microneedling</h3><p>Radiofrequency microneedling to tighten skin, reduce scarring, and stimulate collagen production.</p></div><div class="sc"><h3>Laser Treatments</h3><p>Advanced laser technology for pigmentation, redness, skin resurfacing, and hair removal.</p></div><div class="sc"><h3>Chemical Peels</h3><p>Medical-grade peels customized for your skin type to reveal smoother, brighter, rejuvenated skin.</p></div><div class="sc"><h3>Sofwave & PDO Threads</h3><p>Non-surgical lifting and skin tightening with the latest generation technologies for lasting results.</p></div></div></section>
+<div class="sb"><div class="stat"><div class="sn">190+</div><div class="sla">Yelp Reviews</div></div><div class="stat"><div class="sn">4.8&#9733;</div><div class="sla">Rating</div></div><div class="stat"><div class="sn">NP</div><div class="sla">Led Practice</div></div><div class="stat"><div class="sn">Expert</div><div class="sla">Master Injector</div></div></div>
+<section class="team" id="team"><p class="sl">Meet the Team</p><h2 class="st">Providers Who Care</h2><p><span class="hl">Michelle Tio-Nguyen, NP</span> — Master injector with years of experience in advanced aesthetics. Natural-looking results that enhance your unique beauty.</p><p><span class="hl">Zayna</span> — Skilled aesthetician originally from Oahu, Hawaii, bringing warmth, precision, and aloha spirit to every treatment.</p></section>
+<section class="inf" id="contact"><div class="ig"><div class="ib"><h3>Location</h3><p>8961 W Sahara Ave<br>Suite 106<br>Las Vegas, NV 89117</p></div><div class="ib"><h3>Hours</h3><p>Tue-Fri: 9:30am-5:30pm<br>Sat: By Appointment<br>Sun-Mon: Closed</p></div><div class="ib"><h3>Contact</h3><p>Phone: <a href="tel:7026253838">(702) 625-3838</a><br>beautygoalslv.com<br>IG: @beautygoalslv</p></div></div></section>
+<footer><div class="flogo">Beauty Goals LV</div><p>&copy; 2026 Beauty Goals LV. All Rights Reserved.</p></footer>
+<script src="//code.tidio.co/1fqnp9tocjvqh107gydv2xwhq9psfo5o.js" async></script>
+</body>
+</html>

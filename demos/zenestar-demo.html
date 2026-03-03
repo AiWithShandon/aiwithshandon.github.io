@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenestar | Balanced Being · Las Vegas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--earth:#b89f7a;--el:#d0bb98;--dk:#1c1a17;--dkr:#141210;--tx:#e8e2da;--mt:#a09688}
+body{font-family:'Karla',sans-serif;background:var(--dkr);color:var(--tx);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(20,18,16,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(184,159,122,0.1)}
+.nl{font-family:'Cormorant',serif;font-size:1.6rem;font-weight:300;letter-spacing:4px;color:var(--earth)}
+.nk{display:flex;gap:28px;align-items:center}
+.nk a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--mt);transition:color .3s}
+.nk a:hover{color:var(--earth)}
+.nc{background:var(--earth);color:var(--dkr);padding:10px 24px;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+.hbg{position:absolute;inset:0;background:linear-gradient(135deg,#1c1a17,#1a1815,#141210)}
+.hp{position:absolute;inset:0;opacity:.025;background-image:radial-gradient(circle,var(--earth) 1px,transparent 1px);background-size:55px 55px}
+.hc{position:relative;z-index:2;max-width:750px;padding:0 20px}
+.ht{font-size:.7rem;letter-spacing:6px;text-transform:uppercase;color:var(--earth);margin-bottom:30px;opacity:0;animation:fu .8s ease forwards .3s}
+.hero h1{font-family:'Cormorant',serif;font-size:clamp(2.4rem,6vw,4.5rem);font-weight:300;line-height:1.15;margin-bottom:20px;opacity:0;animation:fu .8s ease forwards .5s}
+.hero h1 em{font-style:italic;color:var(--earth)}
+.hs{font-size:.88rem;color:var(--mt);line-height:1.8;max-width:480px;margin:0 auto 40px;font-weight:300;opacity:0;animation:fu .8s ease forwards .7s}
+.hb{display:inline-block;border:1px solid var(--earth);color:var(--earth);padding:16px 48px;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;transition:all .4s;opacity:0;animation:fu .8s ease forwards .9s}
+.hb:hover{background:var(--earth);color:var(--dkr)}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.sl{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--earth);text-align:center;margin-bottom:16px}
+.st{font-family:'Cormorant',serif;font-size:2.2rem;font-weight:300;text-align:center;margin-bottom:50px}
+.intro{padding:100px 40px;text-align:center;max-width:800px;margin:0 auto}
+.intro p{color:var(--mt);line-height:2;font-size:.88rem;font-weight:300}
+.svc{padding:80px 40px 100px;max-width:1100px;margin:0 auto}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.sc{background:rgba(184,159,122,0.04);border:1px solid rgba(184,159,122,0.1);padding:36px 28px;text-align:center;transition:all .4s}
+.sc:hover{border-color:rgba(184,159,122,0.3);transform:translateY(-3px)}
+.sc h3{font-family:'Cormorant',serif;font-size:1.2rem;margin-bottom:10px}
+.sc p{color:var(--mt);font-size:.78rem;line-height:1.7;font-weight:300}
+.pv{padding:100px 40px;background:rgba(184,159,122,0.04);border-top:1px solid rgba(184,159,122,0.08);border-bottom:1px solid rgba(184,159,122,0.08);text-align:center}
+.pn{font-family:'Cormorant',serif;font-size:1.6rem;color:var(--earth);display:block;margin-bottom:8px}
+.pt{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--earth);margin-bottom:20px}
+.pv p{color:var(--mt);font-size:.88rem;line-height:1.9;font-weight:300;max-width:650px;margin:0 auto}
+.inf{padding:80px 40px;max-width:1000px;margin:0 auto}
+.ig{display:grid;grid-template-columns:1fr 1fr 1fr;gap:50px;text-align:center}
+.ib h3{font-family:'Cormorant',serif;font-size:1.15rem;margin-bottom:14px;color:var(--earth)}
+.ib p{color:var(--mt);font-size:.82rem;line-height:1.8;font-weight:300}
+footer{padding:50px 40px;text-align:center;border-top:1px solid rgba(184,159,122,0.08)}
+.fl{font-family:'Cormorant',serif;font-size:1.4rem;letter-spacing:4px;color:var(--earth);margin-bottom:14px}
+footer p{color:var(--mt);font-size:.72rem}
+footer a{color:var(--earth)}
+@media(max-width:768px){.nk{display:none}.ig{grid-template-columns:1fr}nav{padding:16px 20px}.intro,.svc,.pv,.inf{padding:60px 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nl">ZENESTAR</div><div class="nk"><a href="#services">Services</a><a href="#provider">About</a><a href="#contact">Contact</a><button class="nc">Book Now</button></div></nav>
+<section class="hero"><div class="hbg"></div><div class="hp"></div><div class="hc"><p class="ht">Village Center · Summerlin</p><h1>Find Your<br><em>Balanced Being</em></h1><p class="hs">Where aesthetic artistry meets integrative wellness — expert injectables, regenerative therapies, and functional medicine under one roof.</p><a href="#contact" class="hb">Request a Consultation</a></div></section>
+<section class="intro"><h2 class="st">Zen + Estar = Balanced Being</h2><p>Zenestar was founded on the belief that true beauty radiates from balance — inner wellness reflected outward. Led by Kim Borghese, NP, a master injector who trains other providers, we offer a uniquely holistic approach to aesthetics and wellness.</p></section>
+<section class="svc" id="services"><p class="sl">Our Services</p><h2 class="st">Aesthetics & Integrative Wellness</h2><div class="sg"><div class="sc"><h3>Botox, Dysport & Xeomin</h3><p>Expert neuromodulator injections from a master injector who trains providers nationwide.</p></div><div class="sc"><h3>Fillers & Sculptra</h3><p>Precision volume restoration, facial balancing, and collagen biostimulation for natural results.</p></div><div class="sc"><h3>Kybella</h3><p>Injectable treatment that permanently destroys fat cells under the chin for a sculpted jawline.</p></div><div class="sc"><h3>Microneedling & PRP/PRF</h3><p>Advanced skin rejuvenation combining microneedling with your own platelet-rich growth factors.</p></div><div class="sc"><h3>Hormone Optimization</h3><p>Bioidentical hormones and testosterone replacement to restore balance and vitality.</p></div><div class="sc"><h3>IV Nutrition & Weight Loss</h3><p>Custom IV drips, functional weight loss programs, and specialty lab testing for total wellness.</p></div></div></section>
+<section class="pv" id="provider"><p class="sl">Your Provider</p><span class="pn">Kim Borghese, NP</span><div class="pt">Master Injector · Trainer · Founder</div><p>Kim is not just a provider — she trains other injectors across the country. Her expertise in facial anatomy and injection techniques means you are in the most skilled hands possible.</p></section>
+<section class="inf" id="contact"><div class="ig"><div class="ib"><h3>Location</h3><p>1781 Village Center Cir<br>Suite 130<br>Las Vegas, NV 89134</p></div><div class="ib"><h3>Hours</h3><p>Mon-Fri: 9am-5pm<br>Sat: By Appointment<br>Sunday: Closed</p></div><div class="ib"><h3>Contact</h3><p>Phone: <a href="tel:7024633672">(702) 463-3672</a><br>zenestar.com</p></div></div></section>
+<footer><div class="fl">ZENESTAR</div><p>&copy; 2026 Zenestar. All Rights Reserved.</p></footer>
+<script src="//code.tidio.co/1fqnp9tocjvqh107gydv2xwhq9psfo5o.js" async></script>
+</body>
+</html>
